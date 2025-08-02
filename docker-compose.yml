@@ -1,0 +1,216 @@
+version: '3.8'
+
+services:
+  # Development environment
+  spintron-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: spintron-nn-dev
+    volumes:
+      - .:/workspace
+      - spintron-cache:/workspace/.cache
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8888:8888"  # Jupyter Lab
+      - "6006:6006"  # TensorBoard
+      - "8000:8000"  # Documentation server
+    environment:
+      - PYTHONPATH=/workspace
+      - ENVIRONMENT=development
+      - DEBUG=true
+    networks:
+      - spintron-network
+    stdin_open: true
+    tty: true
+    command: bash
+
+  # Jupyter Lab service
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: spintron-jupyter
+    volumes:
+      - .:/workspace
+      - jupyter-data:/home/jovyan/.jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=spintron-nn-kit
+    networks:
+      - spintron-network
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+
+  # Hardware simulation service
+  simulation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: simulation
+    container_name: spintron-simulation
+    volumes:
+      - .:/workspace
+      - simulation-data:/simulation
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY:-:99}
+      - SPICE_SIMULATOR=ngspice
+      - SIMULATION_MODE=docker
+    networks:
+      - spintron-network
+    stdin_open: true
+    tty: true
+
+  # Benchmarking service
+  benchmark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: benchmarking
+    container_name: spintron-benchmark
+    volumes:
+      - .:/app
+      - benchmark-results:/app/benchmarks/results
+    environment:
+      - BENCHMARK_MODE=docker
+      - PERFORMANCE_MONITORING=true
+    networks:
+      - spintron-network
+    command: python -m spintron_nn.benchmarks.runner --config /app/benchmarks/config.yaml
+
+  # Testing service
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: spintron-test
+    volumes:
+      - .:/workspace
+      - test-results:/workspace/test-results
+    environment:
+      - PYTHONPATH=/workspace
+      - PYTEST_CURRENT_TEST=true
+    networks:
+      - spintron-network
+    command: pytest tests/ -v --cov=spintron_nn --cov-report=html --cov-report=term
+
+  # Documentation service
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: spintron-docs
+    volumes:
+      - .:/workspace
+      - docs-build:/workspace/docs/_build
+    ports:
+      - "8080:8000"
+    networks:
+      - spintron-network
+    working_dir: /workspace/docs
+    command: python -m http.server 8000
+
+  # Production service
+  production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: spintron-production
+    volumes:
+      - production-data:/app/data
+      - production-models:/app/models
+    environment:
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+    networks:
+      - spintron-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import spintron_nn; print('OK')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis for caching (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: spintron-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - spintron-network
+    command: redis-server --appendonly yes
+
+  # PostgreSQL for metrics (optional)
+  postgres:
+    image: postgres:15-alpine
+    container_name: spintron-postgres
+    environment:
+      - POSTGRES_DB=spintron_metrics
+      - POSTGRES_USER=spintron
+      - POSTGRES_PASSWORD=spintron_password
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - spintron-network
+
+  # Monitoring with Prometheus (optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: spintron-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    networks:
+      - spintron-network
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+
+  # Grafana for visualization (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: spintron-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana-dashboards:/etc/grafana/provisioning/dashboards
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=spintron
+    networks:
+      - spintron-network
+
+volumes:
+  spintron-cache:
+  jupyter-data:
+  simulation-data:
+  benchmark-results:
+  test-results:
+  docs-build:
+  production-data:
+  production-models:
+  redis-data:
+  postgres-data:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  spintron-network:
+    driver: bridge
