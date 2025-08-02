@@ -1,0 +1,62 @@
+{
+  "name": "spintron-nn-kit",
+  "version": "0.1.0",
+  "description": "Ultra-low-power neural inference framework for spin-orbit-torque hardware",
+  "main": "index.js",
+  "scripts": {
+    "test": "python -m pytest tests/ -v --cov=spintron_nn --cov-report=html --cov-report=term-missing",
+    "test:unit": "python -m pytest tests/unit/ -v",
+    "test:integration": "python -m pytest tests/integration/ -v",
+    "test:e2e": "python -m pytest tests/e2e/ -v",
+    "lint": "python -m flake8 spintron_nn/ tests/ && python -m pylint spintron_nn/",
+    "lint:fix": "python -m black spintron_nn/ tests/ && python -m isort spintron_nn/ tests/",
+    "format": "python -m black spintron_nn/ tests/ && python -m isort spintron_nn/ tests/",
+    "format:check": "python -m black --check spintron_nn/ tests/ && python -m isort --check-only spintron_nn/ tests/",
+    "typecheck": "python -m mypy spintron_nn/",
+    "build": "python -m build",
+    "build:docs": "cd docs && make html",
+    "dev": "python -m jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root",
+    "clean": "find . -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true; find . -name '*.pyc' -delete; rm -rf build/ dist/ *.egg-info/ .coverage htmlcov/ .pytest_cache/ .mypy_cache/",
+    "security-check": "python -m bandit -r spintron_nn/ -f json -o security_report.json",
+    "install:dev": "pip install -e '.[dev]'",
+    "install:all": "pip install -e '.[all]'",
+    "benchmark": "python scripts/run_benchmarks.py",
+    "simulate": "python scripts/run_simulation.py",
+    "generate:hardware": "python scripts/generate_hardware.py",
+    "analyze:power": "python scripts/analyze_power.py",
+    "docs:serve": "cd docs && python -m http.server 8000",
+    "pre-commit": "pre-commit run --all-files",
+    "requirements": "pip-compile requirements.in && pip-compile requirements-dev.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieleschmidt/spintron-nn-kit.git"
+  },
+  "keywords": [
+    "spintronics",
+    "neural-networks",
+    "pytorch",
+    "hardware-acceleration",
+    "mtj",
+    "sot",
+    "low-power",
+    "edge-ai",
+    "neuromorphic",
+    "verilog"
+  ],
+  "author": "SpinTron-NN-Kit Contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danieleschmidt/spintron-nn-kit/issues"
+  },
+  "homepage": "https://github.com/danieleschmidt/spintron-nn-kit#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "husky": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8"
+  }
+}

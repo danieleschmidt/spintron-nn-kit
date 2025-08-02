@@ -205,3 +205,139 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# SpinTron-NN-Kit Specific Files
+
+# PyTorch model files
+*.pth
+*.pt
+*.ckpt
+
+# TensorBoard logs
+runs/
+logs/
+tensorboard/
+
+# Weights & Biases
+wandb/
+
+# Hardware Design Files
+*.gds
+*.lef
+*.lib
+*.db
+*.ddc
+*.pvl
+*.sdf
+*.spef
+*.sbf
+
+# SPICE simulation files
+*.raw
+*.lis
+*.sw0
+*.st0
+*.ic0
+*.tr0
+*.ac0
+*.dc0
+*.op
+*.mt0
+*.ms0
+*.ma0
+
+# Verilog simulation files
+*.vcd
+*.fsdb
+*.shm/
+*.vpd
+*.wlf
+*.his
+*.key
+transcript
+work/
+modelsim.ini
+
+# Synthesis files
+*.mapped
+*.unmapped
+*.timing
+*.area
+*.power
+*.qor
+
+# Place and Route
+*.def
+*.cts
+*.route
+*.enc
+
+# Verification files
+*.cov
+*.ucdb
+*.cmm
+
+# Cadence files
+.cdsinit
+cds.lib
+hdl.var
+
+# Synopsys files
+.synopsys_dc.setup
+.synopsys_pt.setup
+.synopsys_vcs.setup
+
+# Xilinx files
+*.xpr
+*.runs/
+*.sim/
+*.ip_user_files/
+*.cache/
+*.hw/
+*.gen/
+
+# Intel/Altera files
+*.qpf
+*.qsf
+*.qws
+*.bak
+db/
+incremental_db/
+output_files/
+
+# Simulation and test outputs
+simulation/
+test_outputs/
+benchmarks/results/
+power_reports/
+
+# Model files (too large for git)
+*.onnx
+*.pb
+*.tflite
+models/weights/
+
+# Data files
+data/
+dataset/
+*.h5
+*.hdf5
+
+# Cache directories
+cache/
+
+# Local configuration files
+local_config.py
+local_settings.py
+
+# Docker
+docker-compose.override.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+
+# Kubernetes
+*.kubeconfig

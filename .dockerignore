@@ -1,0 +1,174 @@
+# Docker ignore file for SpinTron-NN-Kit
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+docs/_build/
+docs/source/_build/
+*.md
+!README.md
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Testing
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+htmlcov/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyTorch
+*.pth
+*.pt
+*.ckpt
+
+# TensorBoard
+runs/
+logs/
+tensorboard/
+
+# Weights & Biases
+wandb/
+
+# Hardware simulation files
+*.vcd
+*.fsdb
+*.shm/
+*.vpd
+*.wlf
+*.log
+*.his
+*.key
+transcript
+work/
+modelsim.ini
+simulation/
+
+# Hardware design files (too large)
+*.gds
+*.lef
+*.lib
+*.db
+*.ddc
+
+# SPICE files
+*.raw
+*.lis
+*.sw0
+*.st0
+*.ic0
+*.tr0
+*.ac0
+*.dc0
+*.op
+
+# Synthesis outputs
+*.mapped
+*.unmapped
+*.timing
+*.area
+*.power
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Data files
+data/
+dataset/
+*.csv
+*.h5
+*.hdf5
+
+# Cache directories
+cache/
+.cache/
+
+# Local configuration
+local_config.py
+local_settings.py
+
+# CI/CD files
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Development tools
+.pre-commit-config.yaml
+.editorconfig
+Makefile
+
+# Docker files (avoid recursion)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Security
+*.key
+*.pem
+*.crt
+*.p12
+
+# Benchmarking results
+benchmarks/results/
+power_reports/
+test_outputs/
