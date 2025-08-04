@@ -550,9 +550,9 @@ If you use SpinTron-NN-Kit in your research, please cite:
 ```bibtex
 @software{spintron_nn_kit,
   title={SpinTron-NN-Kit: Neural Inference on Spin-Orbit-Torque Hardware},
-  author={Your Name},
+  author={Daniel Schmidt},
   year={2025},
-  url={https://github.com/yourusername/spintron-nn-kit}
+  url={https://github.com/danieleschmidt/spintron-nn-kit}
 }
 ```
 
