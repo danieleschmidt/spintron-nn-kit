@@ -1,0 +1,48 @@
+{
+  "timestamp": 1754317166.922287,
+  "total_time_seconds": 1.0615708827972412,
+  "basic_operations": {
+    "resistance_ops_per_sec": 9169881.941407958,
+    "crossbar_ops_per_sec": 1017.2317827695754,
+    "resistance_latency_us": 0.10905265808105469,
+    "crossbar_latency_ms": 0.9830601215362548
+  },
+  "memory_efficiency": {
+    "creation_rate_elements_per_sec": 1400883.0346717115,
+    "per_element_creation_time_us": 0.7138354703783989,
+    "cleanup_time_ms": 4.194736480712891
+  },
+  "algorithm_performance": {
+    "quantization_rate_values_per_sec": 1415980.4464370112,
+    "inference_rate_batches_per_sec": 17034.090078382,
+    "per_quantization_time_us": 0.7062244415283203,
+    "per_inference_time_ms": 0.058705806732177734
+  },
+  "validation_results": {
+    "resistance_ops_per_sec": {
+      "actual": 9169881.941407958,
+      "requirement": 100000,
+      "passed": true,
+      "description": "MTJ resistance operations per second"
+    },
+    "crossbar_ops_per_sec": {
+      "actual": 1017.2317827695754,
+      "requirement": 1000,
+      "passed": true,
+      "description": "Crossbar operations per second"
+    },
+    "quantization_rate_values_per_sec": {
+      "actual": 1415980.4464370112,
+      "requirement": 100000,
+      "passed": true,
+      "description": "Quantization rate"
+    },
+    "inference_rate_batches_per_sec": {
+      "actual": 17034.090078382,
+      "requirement": 100,
+      "passed": true,
+      "description": "Inference throughput"
+    }
+  },
+  "all_requirements_met": true
+}

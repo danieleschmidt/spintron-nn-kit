@@ -25,9 +25,24 @@ pip install spintron-nn-kit
 pip install spintron-nn-kit[simulation]
 
 # Development installation
-git clone https://github.com/yourusername/spintron-nn-kit
-cd spintron-nn-kit
+git clone https://github.com/danieleschmidt/photonic-mlir-synth-bridge
+cd photonic-mlir-synth-bridge
 pip install -e ".[dev]"
+```
+
+## Quick Validation
+
+Run the framework validation to ensure everything is working:
+
+```bash
+# Basic validation (no external dependencies required)
+python3 benchmarks/basic_validation.py
+
+# Performance benchmark (no external dependencies required)  
+python3 benchmarks/simple_benchmark.py
+
+# Full test suite (requires PyTorch/numpy)
+python3 -m pytest tests/ -v
 ```
 
 ## Quick Start
@@ -129,9 +144,10 @@ spintron-nn-kit/
 │   │   ├── behavioral.py      # Fast behavioral simulation
 │   │   └── power_analysis.py  # Power consumption analysis
 │   └── models/              # Pre-optimized models
-├── examples/
-├── tests/
-└── benchmarks/
+├── examples/              # Usage examples and tutorials
+├── tests/                 # Comprehensive test suite
+├── benchmarks/           # Performance validation
+└── docs/                 # Documentation
 ```
 
 ## Spintronic Device Modeling
@@ -411,6 +427,37 @@ hybrid_model = designer.partition(
     spintronic_layers=['conv', 'fc'],
     cmos_layers=['batchnorm', 'activation']
 )
+```
+
+## Examples and Tutorials
+
+The framework includes comprehensive examples demonstrating various use cases:
+
+### Basic Examples
+- **[basic_usage.py](examples/basic_usage.py)** - Core functionality overview without external dependencies
+- **[EXAMPLES.md](EXAMPLES.md)** - Comprehensive usage examples and tutorials
+
+### Advanced Examples
+- **[mnist_classification.py](examples/mnist_classification.py)** - Complete MNIST classification pipeline
+- **[keyword_spotting.py](examples/keyword_spotting.py)** - Always-on keyword spotting for voice interfaces
+- **[hardware_deployment.py](examples/hardware_deployment.py)** - Full hardware generation and deployment
+- **[variation_analysis.py](examples/variation_analysis.py)** - Device variation analysis and robustness evaluation
+
+### Performance Validation
+- **[benchmarks/basic_validation.py](benchmarks/basic_validation.py)** - Framework validation (no dependencies)
+- **[benchmarks/simple_benchmark.py](benchmarks/simple_benchmark.py)** - Performance benchmarking (no dependencies)
+- **[benchmarks/performance_benchmark.py](benchmarks/performance_benchmark.py)** - Full performance analysis
+
+Run examples:
+```bash
+# Basic functionality demonstration
+python3 examples/basic_usage.py
+
+# Framework validation 
+python3 benchmarks/basic_validation.py
+
+# Performance benchmarking
+python3 benchmarks/simple_benchmark.py
 
 # Co-optimize hybrid system
 hybrid_model.co_optimize(
