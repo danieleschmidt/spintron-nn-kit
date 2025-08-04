@@ -1,0 +1,22 @@
+{
+  "timestamp": 1754317060.4144635,
+  "total_time_seconds": 0.012328147888183594,
+  "test_results": {
+    "imports": false,
+    "functionality": false,
+    "file_structure": true,
+    "code_quality": true,
+    "performance": false
+  },
+  "all_tests_passed": false,
+  "quality_metrics": {
+    "total_files": 26,
+    "total_lines": 9760,
+    "documentation_ratio": 1.0,
+    "avg_lines_per_file": 375.38461538461536
+  },
+  "performance_results": {
+    "performance_ok": false,
+    "error": "No module named 'numpy'"
+  }
+}
