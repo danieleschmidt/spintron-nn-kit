@@ -1,0 +1,43 @@
+{
+  "demonstration": "SpinTron-NN-Kit Core Functionality",
+  "timestamp": "2025-01-01T00:00:00Z",
+  "mtj_device": {
+    "resistance_ratio": 3.0,
+    "switching_successful": true
+  },
+  "crossbar": {
+    "size": "4x4",
+    "input_vector": [
+      1.0,
+      0.5,
+      -0.3,
+      0.8
+    ],
+    "output_vector": [
+      0.00033,
+      0.00027,
+      0.00033,
+      0.00027
+    ]
+  },
+  "network": {
+    "architecture": [
+      4,
+      3,
+      2
+    ],
+    "total_devices": 18,
+    "inference_result": [
+      1.3600000000000003e-07,
+      1.3600000000000003e-07
+    ]
+  },
+  "performance": {
+    "mac_operations": 18,
+    "energy_per_mac_pj": 15.0,
+    "total_dynamic_energy_pj": 270.0,
+    "static_power_nw": 1.8,
+    "energy_improvement_vs_cmos": 66.66666666666667,
+    "network_accuracy_estimate": 0.85
+  }
+}
