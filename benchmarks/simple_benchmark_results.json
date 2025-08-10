@@ -1,48 +1,48 @@
 {
-  "timestamp": 1754682389.6579754,
-  "total_time_seconds": 1.1854722499847412,
+  "timestamp": 1754794930.7976346,
+  "total_time_seconds": 0.404726505279541,
   "basic_operations": {
-    "resistance_ops_per_sec": 9941464.802085802,
-    "crossbar_ops_per_sec": 931.8499168305358,
-    "resistance_latency_us": 0.10058879852294922,
-    "crossbar_latency_ms": 1.073134183883667
+    "resistance_ops_per_sec": 7981549.0009514745,
+    "crossbar_ops_per_sec": 3220.11095295785,
+    "resistance_latency_us": 0.1252889633178711,
+    "crossbar_latency_ms": 0.3105483055114746
   },
   "memory_efficiency": {
-    "creation_rate_elements_per_sec": 698473.7210068181,
-    "per_element_creation_time_us": 1.4316930901259184,
-    "cleanup_time_ms": 4.932403564453125
+    "creation_rate_elements_per_sec": 987252.3479889896,
+    "per_element_creation_time_us": 1.0129122529178858,
+    "cleanup_time_ms": 4.961967468261719
   },
   "algorithm_performance": {
-    "quantization_rate_values_per_sec": 1302174.479975163,
-    "inference_rate_batches_per_sec": 16727.70200207386,
-    "per_quantization_time_us": 0.7679462432861328,
-    "per_inference_time_ms": 0.05978107452392578
+    "quantization_rate_values_per_sec": 1329347.4815857199,
+    "inference_rate_batches_per_sec": 16777.216,
+    "per_quantization_time_us": 0.7522487640380859,
+    "per_inference_time_ms": 0.059604644775390625
   },
   "validation_results": {
     "resistance_ops_per_sec": {
-      "actual": 9941464.802085802,
+      "actual": 7981549.0009514745,
       "requirement": 100000,
       "passed": true,
       "description": "MTJ resistance operations per second"
     },
     "crossbar_ops_per_sec": {
-      "actual": 931.8499168305358,
+      "actual": 3220.11095295785,
       "requirement": 1000,
-      "passed": false,
+      "passed": true,
       "description": "Crossbar operations per second"
     },
     "quantization_rate_values_per_sec": {
-      "actual": 1302174.479975163,
+      "actual": 1329347.4815857199,
       "requirement": 100000,
       "passed": true,
       "description": "Quantization rate"
     },
     "inference_rate_batches_per_sec": {
-      "actual": 16727.70200207386,
+      "actual": 16777.216,
       "requirement": 100,
       "passed": true,
       "description": "Inference throughput"
     }
   },
-  "all_requirements_met": false
+  "all_requirements_met": true
 }
