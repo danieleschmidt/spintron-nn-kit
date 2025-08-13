@@ -821,3 +821,253 @@ def record_processing_activity(purpose: DataProcessingPurpose,
     return get_compliance_manager().record_data_processing(
         purpose, data_category, **kwargs
     )
+
+
+def demonstrate_global_compliance():
+    """Demonstrate comprehensive global compliance capabilities."""
+    print("🌍 Global Compliance and Regulatory Framework")
+    print("=" * 55)
+    
+    # Initialize compliance manager with all regulations
+    config = ComplianceConfig(
+        enabled_regulations=[
+            RegulationType.GDPR,
+            RegulationType.CCPA, 
+            RegulationType.PDPA
+        ],
+        data_controller_name="SpinTron-NN-Kit Global Corp",
+        retention_policy_days=365,
+        auto_anonymization=True
+    )
+    
+    compliance_manager = ComplianceManager(config)
+    
+    print(f"✅ Compliance manager initialized")
+    print(f"   Enabled regulations: {len(config.enabled_regulations)}")
+    print(f"   Data controller: {config.data_controller_name}")
+    print(f"   Retention policy: {config.retention_policy_days} days")
+    
+    # Get compliance status
+    status = compliance_manager.get_compliance_status()
+    print(f"\n📊 Compliance Status")
+    print(f"   GDPR active: {status['gdpr_active']}")
+    print(f"   CCPA active: {status['ccpa_active']}")  
+    print(f"   PDPA active: {status['pdpa_active']}")
+    print(f"   Audit entries: {status['audit_log_entries']}")
+    
+    # Record data processing activities
+    print(f"\n📝 Recording Data Processing Activities")
+    
+    processing_scenarios = [
+        {
+            "purpose": DataProcessingPurpose.NEURAL_INFERENCE,
+            "category": DataCategory.TECHNICAL_DATA,
+            "description": "Neural network inference processing"
+        },
+        {
+            "purpose": DataProcessingPurpose.PERFORMANCE_MONITORING,
+            "category": DataCategory.USAGE_DATA,
+            "description": "System performance monitoring"
+        },
+        {
+            "purpose": DataProcessingPurpose.MODEL_TRAINING,
+            "category": DataCategory.POTENTIALLY_PERSONAL,
+            "description": "Training data that may contain personal info"
+        }
+    ]
+    
+    for scenario in processing_scenarios:
+        record_ids = compliance_manager.record_data_processing(
+            purpose=scenario["purpose"],
+            data_category=scenario["category"],
+            data_subject_count=100 if scenario["category"] == DataCategory.POTENTIALLY_PERSONAL else 0,
+            legal_basis="Legitimate interest" if scenario["purpose"] != DataProcessingPurpose.MODEL_TRAINING else "Consent"
+        )
+        
+        print(f"   {scenario['description']}:")
+        for regulation, record_id in record_ids.items():
+            print(f"     {regulation}: {record_id[:16]}...")
+    
+    # Handle privacy rights requests
+    print(f"\n🔐 Privacy Rights Requests")
+    
+    # GDPR data subject request
+    gdpr_response = compliance_manager.handle_privacy_request(
+        regulation=RegulationType.GDPR,
+        request_type="access",
+        subject_id="user_12345",
+        details={"requested_data": "all_personal_data"}
+    )
+    
+    print(f"   GDPR Access Request:")
+    print(f"     Status: {gdpr_response.get('status', 'N/A')}")
+    print(f"     Data categories: {len(gdpr_response.get('data_categories', []))}")
+    
+    # CCPA consumer request
+    ccpa_response = compliance_manager.handle_privacy_request(
+        regulation=RegulationType.CCPA,
+        request_type="know",
+        subject_id="consumer_67890",
+        verification_data={"email": "user@example.com", "verification_code": "123456"}
+    )
+    
+    print(f"   CCPA Right to Know:")
+    print(f"     Status: {ccpa_response.get('status', 'N/A')}")
+    print(f"     Personal info categories: {len(ccpa_response.get('personal_info_categories', []))}")
+    
+    # PDPA consent management
+    if compliance_manager.pdpa:
+        consent_id = compliance_manager.pdpa.record_consent(
+            individual_id="individual_abc",
+            purpose="AI model training",
+            consent_given=True,
+            consent_method="explicit_web_form"
+        )
+        
+        print(f"   PDPA Consent Recorded:")
+        print(f"     Consent ID: {consent_id[:16]}...")
+        print(f"     Purpose: AI model training")
+    
+    # Generate compliance reports
+    print(f"\n📋 Compliance Reporting")
+    
+    # Generate GDPR Article 30 report
+    if compliance_manager.gdpr:
+        gdpr_report = compliance_manager.gdpr.generate_article_30_report()
+        print(f"   GDPR Article 30 Report:")
+        print(f"     Processing activities: {gdpr_report['total_activities']}")
+        print(f"     Controller: {gdpr_report['controller_name']}")
+    
+    # Generate comprehensive compliance report
+    full_report = compliance_manager.generate_compliance_report()
+    
+    print(f"   Comprehensive Report:")
+    print(f"     Report ID: {full_report['report_id'][:16]}...")
+    print(f"     Audit entries: {len(full_report['audit_trail'])}")
+    print(f"     Enabled regulations: {len(full_report['configuration']['enabled_regulations'])}")
+    
+    # Demonstrate data breach reporting (PDPA)
+    print(f"\n🚨 Data Breach Management")
+    
+    if compliance_manager.pdpa:
+        breach_id = compliance_manager.pdpa.report_data_breach({
+            "type": "unauthorized_access",
+            "affected_count": 50,
+            "data_categories": ["usage_data", "technical_data"],
+            "severity": "medium",
+            "containment_measures": ["Access revoked", "Passwords reset", "Security audit initiated"]
+        })
+        
+        print(f"   Data Breach Reported:")
+        print(f"     Incident ID: {breach_id[:16]}...")
+        print(f"     Affected individuals: 50")
+        print(f"     Severity: medium")
+    
+    # International data transfer considerations
+    print(f"\n🌐 International Data Transfers")
+    
+    transfer_scenarios = [
+        {"from": "EU", "to": "US", "mechanism": "Standard Contractual Clauses"},
+        {"from": "Singapore", "to": "EU", "mechanism": "Adequacy Decision"},
+        {"from": "Brazil", "to": "Canada", "mechanism": "Corporate Binding Rules"}
+    ]
+    
+    for transfer in transfer_scenarios:
+        print(f"   {transfer['from']} → {transfer['to']}: {transfer['mechanism']}")
+    
+    # Privacy impact assessment
+    print(f"\n🔍 Privacy Impact Assessment")
+    
+    pia_factors = {
+        "data_volume": "high",
+        "data_sensitivity": "medium", 
+        "processing_complexity": "high",
+        "automated_decision_making": True,
+        "vulnerable_groups": False,
+        "new_technology": True
+    }
+    
+    # Simplified PIA scoring
+    risk_score = 0
+    risk_score += 3 if pia_factors["data_volume"] == "high" else 1
+    risk_score += 3 if pia_factors["data_sensitivity"] == "high" else 2 if pia_factors["data_sensitivity"] == "medium" else 1
+    risk_score += 2 if pia_factors["automated_decision_making"] else 0
+    risk_score += 2 if pia_factors["new_technology"] else 0
+    
+    pia_required = risk_score >= 6
+    
+    print(f"   Risk assessment score: {risk_score}/10")
+    print(f"   PIA required: {'Yes' if pia_required else 'No'}")
+    print(f"   Key risk factors: automated decisions, new technology")
+    
+    # Compliance training recommendations
+    print(f"\n🎓 Compliance Training Recommendations")
+    
+    training_modules = [
+        "GDPR Fundamentals and Data Subject Rights",
+        "CCPA Consumer Privacy Requirements", 
+        "PDPA Consent Management and Breach Response",
+        "International Data Transfer Mechanisms",
+        "Privacy by Design Implementation",
+        "Data Protection Impact Assessments"
+    ]
+    
+    for i, module in enumerate(training_modules, 1):
+        print(f"   {i}. {module}")
+    
+    # Compliance monitoring dashboard
+    print(f"\n📈 Compliance Monitoring Dashboard")
+    
+    # Calculate compliance metrics
+    total_processing_records = len(compliance_manager.gdpr.processing_records) if compliance_manager.gdpr else 0
+    total_consumer_requests = len(compliance_manager.ccpa.consumer_requests) if compliance_manager.ccpa else 0
+    total_consent_records = len(compliance_manager.pdpa.consent_records) if compliance_manager.pdpa else 0
+    total_breach_incidents = len(compliance_manager.pdpa.breach_incidents) if compliance_manager.pdpa else 0
+    
+    print(f"   Processing records (GDPR): {total_processing_records}")
+    print(f"   Consumer requests (CCPA): {total_consumer_requests}")
+    print(f"   Consent records (PDPA): {total_consent_records}")
+    print(f"   Breach incidents: {total_breach_incidents}")
+    
+    # Overall compliance health score
+    health_score = 100
+    health_score -= 10 if total_breach_incidents > 0 else 0
+    health_score -= 5 if total_processing_records == 0 else 0
+    health_score += 5 if total_consent_records > 0 else 0
+    
+    print(f"   Compliance health score: {health_score}/100")
+    
+    # Regulatory calendar
+    print(f"\n📅 Regulatory Calendar")
+    
+    import datetime
+    current_date = datetime.datetime.now()
+    
+    upcoming_deadlines = [
+        {"task": "GDPR Article 30 review", "date": "2024-12-31", "regulation": "GDPR"},
+        {"task": "CCPA privacy notice update", "date": "2024-07-01", "regulation": "CCPA"},
+        {"task": "PDPA consent audit", "date": "2024-09-30", "regulation": "PDPA"}
+    ]
+    
+    for deadline in upcoming_deadlines:
+        print(f"   {deadline['date']}: {deadline['task']} ({deadline['regulation']})")
+    
+    return {
+        "enabled_regulations": len(config.enabled_regulations),
+        "processing_records": total_processing_records,
+        "consumer_requests": total_consumer_requests,
+        "consent_records": total_consent_records,
+        "breach_incidents": total_breach_incidents,
+        "compliance_health_score": health_score,
+        "pia_required": pia_required,
+        "audit_entries": status['audit_log_entries'],
+        "privacy_requests_handled": 2,  # GDPR + CCPA
+        "data_transfer_mechanisms": len(transfer_scenarios),
+        "training_modules_available": len(training_modules)
+    }
+
+
+if __name__ == "__main__":
+    results = demonstrate_global_compliance()
+    print(f"\n🎉 Global Compliance Framework: VALIDATION COMPLETED")
+    print(json.dumps(results, indent=2))
