@@ -1,0 +1,243 @@
+version: '3.8'
+
+services:
+  # Main SpinTron-NN-Kit API service
+  spintron-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: spintron-nn-kit:production
+    container_name: spintron-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - SPINTRON_ENV=production
+      - SPINTRON_LOG_LEVEL=INFO
+      - SPINTRON_WORKERS=4
+      - SPINTRON_MAX_MEMORY_GB=8
+    volumes:
+      - ./data:/app/data:ro
+      - ./models:/app/models:ro
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import spintron_nn; print('healthy')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.spintron-api.rule=Host(`api.spintron.local`)"
+      - "traefik.http.services.spintron-api.loadbalancer.server.port=8080"
+    networks:
+      - spintron-network
+
+  # Redis for caching and session management
+  redis:
+    image: redis:7-alpine
+    container_name: spintron-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spintron-network
+
+  # PostgreSQL for persistent data storage
+  postgres:
+    image: postgres:15-alpine
+    container_name: spintron-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=spintron
+      - POSTGRES_USER=spintron
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-spintron_secure_password}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U spintron"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spintron-network
+
+  # Monitoring with Prometheus
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: spintron-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=30d'
+      - '--web.enable-lifecycle'
+    networks:
+      - spintron-network
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: spintron-grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./docker/grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      - prometheus
+    networks:
+      - spintron-network
+
+  # Load balancer and reverse proxy
+  traefik:
+    image: traefik:v3.0
+    container_name: spintron-traefik
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8180:8080"  # Dashboard
+    environment:
+      - TRAEFIK_API_DASHBOARD=true
+      - TRAEFIK_API_INSECURE=true
+      - TRAEFIK_PROVIDERS_DOCKER=true
+      - TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT=false
+      - TRAEFIK_ENTRYPOINTS_WEB_ADDRESS=:80
+      - TRAEFIK_ENTRYPOINTS_WEBSECURE_ADDRESS=:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./docker/traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./docker/traefik/dynamic:/etc/traefik/dynamic:ro
+    networks:
+      - spintron-network
+
+  # Log aggregation with Fluentd
+  fluentd:
+    build:
+      context: ./docker/fluentd
+      dockerfile: Dockerfile
+    container_name: spintron-fluentd
+    restart: unless-stopped
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    volumes:
+      - ./docker/fluentd/conf:/fluentd/etc
+      - ./logs:/fluentd/log
+    networks:
+      - spintron-network
+
+  # Model serving with high performance
+  model-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: spintron-nn-kit:production
+    container_name: spintron-model-server
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      - SPINTRON_ENV=production
+      - SPINTRON_SERVICE=model-server
+      - SPINTRON_PORT=8081
+      - SPINTRON_WORKERS=2
+    volumes:
+      - ./models:/app/models:ro
+      - ./cache:/app/cache
+    depends_on:
+      - redis
+      - postgres
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spintron-network
+
+  # Background task worker
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: spintron-nn-kit:production
+    container_name: spintron-worker
+    restart: unless-stopped
+    environment:
+      - SPINTRON_ENV=production
+      - SPINTRON_SERVICE=worker
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./results:/app/results
+    depends_on:
+      - redis
+      - postgres
+    command: ["celery", "worker", "-A", "spintron_nn.tasks", "--loglevel=info"]
+    networks:
+      - spintron-network
+
+  # Backup service
+  backup:
+    image: postgres:15-alpine
+    container_name: spintron-backup
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=spintron
+      - POSTGRES_USER=spintron
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-spintron_secure_password}
+    volumes:
+      - ./backups:/backups
+      - ./docker/backup/backup.sh:/backup.sh:ro
+    depends_on:
+      - postgres
+    command: ["sh", "-c", "while true; do sleep 24h; /backup.sh; done"]
+    networks:
+      - spintron-network
+
+networks:
+  spintron-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local
+  prometheus-data:
+    driver: local
+  grafana-data:
+    driver: local

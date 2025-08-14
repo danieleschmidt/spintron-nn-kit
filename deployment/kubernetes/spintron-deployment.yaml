@@ -1,0 +1,594 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: spintron-nn
+  labels:
+    name: spintron-nn
+    security.policy: restricted
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spintron-config
+  namespace: spintron-nn
+data:
+  SPINTRON_ENV: "production"
+  SPINTRON_LOG_LEVEL: "INFO"
+  SPINTRON_WORKERS: "4"
+  SPINTRON_MAX_MEMORY_GB: "8"
+  REDIS_URL: "redis://spintron-redis:6379"
+  POSTGRES_URL: "postgresql://spintron:password@spintron-postgres:5432/spintron"
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: spintron-secrets
+  namespace: spintron-nn
+type: Opaque
+data:
+  postgres-password: c3BpbnRyb25fc2VjdXJlX3Bhc3N3b3Jk  # base64 encoded
+  redis-password: cmVkaXNfc2VjdXJlX3Bhc3N3b3Jk  # base64 encoded
+  api-key: YXBpX3NlY3VyZV9rZXlfMTIzNDU=  # base64 encoded
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spintron-api
+  namespace: spintron-nn
+  labels:
+    app: spintron-api
+    version: v1
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: spintron-api
+  template:
+    metadata:
+      labels:
+        app: spintron-api
+        version: v1
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/metrics"
+    spec:
+      serviceAccountName: spintron-service-account
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+      - name: spintron-api
+        image: spintron-nn-kit:production
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        envFrom:
+        - configMapRef:
+            name: spintron-config
+        env:
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: spintron-secrets
+              key: postgres-password
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: spintron-secrets
+              key: api-key
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+        volumeMounts:
+        - name: spintron-data
+          mountPath: /app/data
+          readOnly: true
+        - name: spintron-models
+          mountPath: /app/models
+          readOnly: true
+        - name: spintron-logs
+          mountPath: /app/logs
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: spintron-data
+        persistentVolumeClaim:
+          claimName: spintron-data-pvc
+      - name: spintron-models
+        persistentVolumeClaim:
+          claimName: spintron-models-pvc
+      - name: spintron-logs
+        emptyDir: {}
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      tolerations:
+      - key: "compute-optimized"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spintron-api-service
+  namespace: spintron-nn
+  labels:
+    app: spintron-api
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: spintron-api
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spintron-redis
+  namespace: spintron-nn
+  labels:
+    app: spintron-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spintron-redis
+  template:
+    metadata:
+      labels:
+        app: spintron-redis
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 999
+        fsGroup: 999
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        ports:
+        - containerPort: 6379
+          name: redis
+        command:
+        - redis-server
+        - --appendonly
+        - "yes"
+        - --maxmemory
+        - "512mb"
+        - --maxmemory-policy
+        - "allkeys-lru"
+        - --requirepass
+        - "$(REDIS_PASSWORD)"
+        env:
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: spintron-secrets
+              key: redis-password
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          exec:
+            command:
+            - redis-cli
+            - ping
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          exec:
+            command:
+            - redis-cli
+            - ping
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        volumeMounts:
+        - name: redis-data
+          mountPath: /data
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 999
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: redis-data
+        persistentVolumeClaim:
+          claimName: spintron-redis-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spintron-redis
+  namespace: spintron-nn
+  labels:
+    app: spintron-redis
+spec:
+  type: ClusterIP
+  ports:
+  - port: 6379
+    targetPort: 6379
+    protocol: TCP
+    name: redis
+  selector:
+    app: spintron-redis
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: spintron-postgres
+  namespace: spintron-nn
+  labels:
+    app: spintron-postgres
+spec:
+  serviceName: spintron-postgres
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spintron-postgres
+  template:
+    metadata:
+      labels:
+        app: spintron-postgres
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 999
+        fsGroup: 999
+      containers:
+      - name: postgres
+        image: postgres:15-alpine
+        ports:
+        - containerPort: 5432
+          name: postgres
+        env:
+        - name: POSTGRES_DB
+          value: "spintron"
+        - name: POSTGRES_USER
+          value: "spintron"
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: spintron-secrets
+              key: postgres-password
+        - name: PGDATA
+          value: "/var/lib/postgresql/data/pgdata"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        livenessProbe:
+          exec:
+            command:
+            - pg_isready
+            - -U
+            - spintron
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          exec:
+            command:
+            - pg_isready
+            - -U
+            - spintron
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        volumeMounts:
+        - name: postgres-data
+          mountPath: /var/lib/postgresql/data
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 999
+          capabilities:
+            drop:
+            - ALL
+  volumeClaimTemplates:
+  - metadata:
+      name: postgres-data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: "fast-ssd"
+      resources:
+        requests:
+          storage: 20Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spintron-postgres
+  namespace: spintron-nn
+  labels:
+    app: spintron-postgres
+spec:
+  type: ClusterIP
+  ports:
+  - port: 5432
+    targetPort: 5432
+    protocol: TCP
+    name: postgres
+  selector:
+    app: spintron-postgres
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spintron-worker
+  namespace: spintron-nn
+  labels:
+    app: spintron-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spintron-worker
+  template:
+    metadata:
+      labels:
+        app: spintron-worker
+    spec:
+      serviceAccountName: spintron-service-account
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+      - name: spintron-worker
+        image: spintron-nn-kit:production
+        command: ["celery", "worker", "-A", "spintron_nn.tasks", "--loglevel=info"]
+        envFrom:
+        - configMapRef:
+            name: spintron-config
+        env:
+        - name: CELERY_BROKER_URL
+          value: "redis://spintron-redis:6379/0"
+        - name: CELERY_RESULT_BACKEND
+          value: "redis://spintron-redis:6379/0"
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1000m"
+          limits:
+            memory: "8Gi"
+            cpu: "4000m"
+        volumeMounts:
+        - name: spintron-data
+          mountPath: /app/data
+        - name: spintron-models
+          mountPath: /app/models
+          readOnly: true
+        - name: spintron-results
+          mountPath: /app/results
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: spintron-data
+        persistentVolumeClaim:
+          claimName: spintron-data-pvc
+      - name: spintron-models
+        persistentVolumeClaim:
+          claimName: spintron-models-pvc
+      - name: spintron-results
+        emptyDir: {}
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: spintron-data-pvc
+  namespace: spintron-nn
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: "shared-storage"
+  resources:
+    requests:
+      storage: 100Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: spintron-models-pvc
+  namespace: spintron-nn
+spec:
+  accessModes:
+    - ReadOnlyMany
+  storageClassName: "shared-storage"
+  resources:
+    requests:
+      storage: 50Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: spintron-redis-pvc
+  namespace: spintron-nn
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: "fast-ssd"
+  resources:
+    requests:
+      storage: 10Gi
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: spintron-service-account
+  namespace: spintron-nn
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: spintron-nn
+  name: spintron-role
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services", "endpoints"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: ["apps"]
+  resources: ["deployments", "replicasets"]
+  verbs: ["get", "list", "watch"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: spintron-role-binding
+  namespace: spintron-nn
+subjects:
+- kind: ServiceAccount
+  name: spintron-service-account
+  namespace: spintron-nn
+roleRef:
+  kind: Role
+  name: spintron-role
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spintron-ingress
+  namespace: spintron-nn
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/rate-limit: "100"
+    nginx.ingress.kubernetes.io/rate-limit-window: "1m"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+spec:
+  tls:
+  - hosts:
+    - api.spintron.ai
+    secretName: spintron-tls-secret
+  rules:
+  - host: api.spintron.ai
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: spintron-api-service
+            port:
+              number: 80
+
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: spintron-api-hpa
+  namespace: spintron-nn
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: spintron-api
+  minReplicas: 3
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+      - type: Percent
+        value: 10
+        periodSeconds: 60
+    scaleUp:
+      stabilizationWindowSeconds: 60
+      policies:
+      - type: Percent
+        value: 50
+        periodSeconds: 60
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: spintron-api-pdb
+  namespace: spintron-nn
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: spintron-api
