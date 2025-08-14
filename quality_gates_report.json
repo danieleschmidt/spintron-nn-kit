@@ -1,0 +1,100 @@
+{
+  "timestamp": 1755203968.9126663,
+  "overall_success": false,
+  "quality_score": 0.0,
+  "total_tests": 6,
+  "passed_tests": 0,
+  "failed_tests": 6,
+  "test_results": [
+    {
+      "test_name": "Framework Structure Validation",
+      "success": false,
+      "required_files": 19,
+      "existing_files": 17,
+      "missing_files": [
+        "spintron_nn/reliability/__init__.py",
+        "spintron_nn/security/__init__.py"
+      ],
+      "coverage": 89.47368421052632
+    },
+    {
+      "test_name": "Basic Import Tests",
+      "success": false,
+      "total_tests": 4,
+      "passed_tests": 0,
+      "failed_tests": 4,
+      "results": [
+        {
+          "command": "/usr/bin/python3 -c import numpy as np; print('NumPy:', np.__version__)",
+          "description": "Import test: import numpy as np; print('NumPy:', np.__version__...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'numpy'\n",
+          "execution_time": 0.021443843841552734,
+          "success": false
+        },
+        {
+          "command": "/usr/bin/python3 -c import torch; print('PyTorch:', torch.__version__)",
+          "description": "Import test: import torch; print('PyTorch:', torch.__version__)...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'torch'\n",
+          "execution_time": 0.021184682846069336,
+          "success": false
+        },
+        {
+          "command": "/usr/bin/python3 -c from spintron_nn.core.mtj_models import MTJConfig, MTJDevice; print('MTJ models imported successfully')",
+          "description": "Import test: from spintron_nn.core.mtj_models import MTJConfig,...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/root/repo/spintron_nn/__init__.py\", line 8, in <module>\n    from .core.mtj_models import MTJConfig, MTJDevice\n  File \"/root/repo/spintron_nn/core/__init__.py\", line 3, in <module>\n    from .mtj_models import MTJConfig, MTJDevice, DomainWallDevice\n  File \"/root/repo/spintron_nn/core/mtj_models.py\", line 12, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n",
+          "execution_time": 0.029448270797729492,
+          "success": false
+        },
+        {
+          "command": "/usr/bin/python3 -c from spintron_nn.core.crossbar import MTJCrossbar, CrossbarConfig; print('Crossbar imported successfully')",
+          "description": "Import test: from spintron_nn.core.crossbar import MTJCrossbar,...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/root/repo/spintron_nn/__init__.py\", line 8, in <module>\n    from .core.mtj_models import MTJConfig, MTJDevice\n  File \"/root/repo/spintron_nn/core/__init__.py\", line 3, in <module>\n    from .mtj_models import MTJConfig, MTJDevice, DomainWallDevice\n  File \"/root/repo/spintron_nn/core/mtj_models.py\", line 12, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n",
+          "execution_time": 0.02251911163330078,
+          "success": false
+        }
+      ]
+    },
+    {
+      "test_name": "Core Functionality Tests",
+      "success": false,
+      "execution_time": 0.023114681243896484,
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\nModuleNotFoundError: No module named 'numpy'\n"
+    },
+    {
+      "test_name": "Performance Benchmarks",
+      "success": false,
+      "execution_time": 0.022558927536010742,
+      "benchmark_results": {},
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\nModuleNotFoundError: No module named 'numpy'\n"
+    },
+    {
+      "test_name": "Memory Safety Tests",
+      "success": false,
+      "execution_time": 0.021857023239135742,
+      "memory_results": {},
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\nModuleNotFoundError: No module named 'psutil'\n"
+    },
+    {
+      "test_name": "Security Validation",
+      "success": false,
+      "execution_time": 0.021579742431640625,
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\nModuleNotFoundError: No module named 'numpy'\n"
+    }
+  ],
+  "recommendations": [
+    "Address failing tests before production deployment",
+    "Quality score below 80% - additional testing recommended"
+  ]
+}
