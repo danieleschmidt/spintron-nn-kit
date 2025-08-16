@@ -168,7 +168,27 @@ print("✅ All dependency-free tests passed")
 '''
     
     try:
-        exec(test_code)
+        # Safe execution of validation code in controlled environment
+        # Using compile and exec with restricted globals for security
+        compiled_code = compile(test_code, '<validation_test>', 'exec')
+        test_globals = {
+            '__builtins__': {
+                'print': print,
+                'assert': assert,
+                'len': len,
+                'range': range,
+                'sum': sum,
+                'max': max,
+                'min': min,
+                'abs': abs,
+                'round': round,
+                'TypeError': TypeError,
+                'ValueError': ValueError,
+                'True': True,
+                'False': False
+            }
+        }
+        exec(compiled_code, test_globals)
         print("✅ Dependency-free functionality: PASSED")
         return True
     except Exception as e:

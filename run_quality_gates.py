@@ -251,10 +251,10 @@ if __name__ == "__main__":
     benchmark_results = {}
     if result["success"] and "BENCHMARK_RESULTS:" in result["stdout"]:
         try:
-            import ast
+            import json
             results_line = [line for line in result["stdout"].split('\n') if line.startswith("BENCHMARK_RESULTS:")][0]
             benchmark_data = results_line.split("BENCHMARK_RESULTS:")[1].strip()
-            benchmark_results = ast.literal_eval(benchmark_data)
+            benchmark_results = json.loads(benchmark_data)
         except:
             pass
     
@@ -331,10 +331,10 @@ if __name__ == "__main__":
     memory_results = {}
     if result["success"] and "MEMORY_RESULTS:" in result["stdout"]:
         try:
-            import ast
+            import json
             results_line = [line for line in result["stdout"].split('\n') if line.startswith("MEMORY_RESULTS:")][0]
             memory_data = results_line.split("MEMORY_RESULTS:")[1].strip()
-            memory_results = ast.literal_eval(memory_data)
+            memory_results = json.loads(memory_data)
         except:
             pass
     

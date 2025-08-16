@@ -1,0 +1,28 @@
+# SpinTron-NN-Kit Production Configuration
+# Generated on 2025-08-16T04:25:53.721656
+
+
+  environment: production,
+  version: 1.0.0,
+  logging: 
+    level: INFO,
+    format: %(asctime)s - %(name)s - %(levelname)s - %(message)s,
+    handlers: [
+      console,
+      file
+    ]
+  ,
+  performance: 
+    cache_size_mb: 100,
+    max_workers: 4,
+    timeout_seconds: 30
+  ,
+  security: 
+    enable_input_validation: true,
+    max_file_size_mb: 100,
+    allowed_file_types: [
+      .json,
+      .yaml,
+      .csv
+    ]
+  
