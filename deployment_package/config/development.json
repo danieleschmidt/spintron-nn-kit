@@ -1,0 +1,8 @@
+{
+  "logging": {
+    "level": "DEBUG"
+  },
+  "performance": {
+    "cache_size_mb": 50
+  }
+}

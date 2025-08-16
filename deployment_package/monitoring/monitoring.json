@@ -1,0 +1,17 @@
+{
+  "metrics": {
+    "enabled": true,
+    "port": 9090,
+    "path": "/metrics"
+  },
+  "logging": {
+    "structured": true,
+    "format": "json",
+    "level": "INFO"
+  },
+  "alerts": {
+    "memory_threshold_mb": 1000,
+    "cpu_threshold_percent": 80,
+    "response_time_threshold_ms": 5000
+  }
+}
