@@ -1,0 +1,86 @@
+{
+  "evolution_summary": {
+    "total_generations": 25,
+    "initial_fitness": 0.9678467729622964,
+    "final_fitness": 0.9757004034620106,
+    "improvement_percentage": 0.8114539118290853,
+    "convergence_achieved": true
+  },
+  "best_individual": {
+    "fitness": 0.9757004034620106,
+    "performance_metrics": {
+      "accuracy": 0.9822062712793175,
+      "energy_efficiency": 0.90602948548961,
+      "latency": 14.184715792023242,
+      "accuracy_score": 1.0913403014214638,
+      "energy_score": 1.0659170417524824,
+      "latency_score": 0.5639873309621607
+    },
+    "genome": {
+      "layer_sizes": [
+        23,
+        25,
+        48,
+        12
+      ],
+      "learning_rate": 0.005464284009007615,
+      "mtj_parameters": {
+        "resistance_high": 8111.144396778621,
+        "resistance_low": 4310.262221275687,
+        "switching_voltage": 0.2334175545348808,
+        "thermal_stability": 48.57759265986361
+      },
+      "plasticity_config": {
+        "stdp_window": 0.020447908115652242,
+        "ltp_amplitude": 0.11277760505429286,
+        "ltd_amplitude": -0.056422526269896606,
+        "target_firing_rate": 10.445839463767493,
+        "homeostatic_timescale": 109.30873697846492
+      },
+      "crossbar_config": {
+        "rows": 128,
+        "cols": 128,
+        "read_voltage": 0.1,
+        "write_voltage": 0.5
+      }
+    },
+    "generation": 9
+  },
+  "strategy_analysis": {
+    "adaptive_gradient": {
+      "count": 4,
+      "total_improvement": 0.0,
+      "avg_improvement": 0.0
+    },
+    "neuromorphic_evolution": {
+      "count": 4,
+      "total_improvement": 0.0,
+      "avg_improvement": 0.0
+    },
+    "simulated_annealing": {
+      "count": 6,
+      "total_improvement": 0.005292831515307794,
+      "avg_improvement": 0.0008821385858846323
+    },
+    "genetic_algorithm": {
+      "count": 4,
+      "total_improvement": 0.0025607989844064205,
+      "avg_improvement": 0.0006401997461016051
+    },
+    "differential_evolution": {
+      "count": 3,
+      "total_improvement": 0.0,
+      "avg_improvement": 0.0
+    },
+    "particle_swarm": {
+      "count": 4,
+      "total_improvement": 0.0,
+      "avg_improvement": 0.0
+    }
+  },
+  "adaptation_state": {
+    "mutation_rate": 0.14556459566795643,
+    "crossover_rate": 0.7,
+    "selection_pressure": 0.12253790252282223,
+    "strategy_weights": {
+      
