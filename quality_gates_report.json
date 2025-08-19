@@ -1,634 +1,97 @@
 {
-  "timestamp": 1755318182.2758462,
-  "overall_metrics": {
-    "total_gates": 4,
-    "passed_gates": 1,
-    "failed_gates": 3,
-    "success_rate": 25.0,
-    "overall_score": 49.75920536728334,
-    "total_execution_time_ms": 681.0557842254639
-  },
-  "gate_results": [
+  "timestamp": 1755563130.890198,
+  "overall_success": false,
+  "quality_score": 16.666666666666664,
+  "total_tests": 6,
+  "passed_tests": 1,
+  "failed_tests": 5,
+  "test_results": [
     {
-      "gate_name": "Security Validation",
-      "passed": false,
-      "score": 0,
-      "execution_time_ms": 504.49657440185547,
-      "recommendations_count": 1,
-      "top_recommendations": [
-        "Avoid using eval(), exec(), and shell=True in subprocess calls"
+      "test_name": "Framework Structure Validation",
+      "success": true,
+      "required_files": 19,
+      "existing_files": 19,
+      "missing_files": [],
+      "coverage": 100.0
+    },
+    {
+      "test_name": "Basic Import Tests",
+      "success": false,
+      "total_tests": 4,
+      "passed_tests": 0,
+      "failed_tests": 4,
+      "results": [
+        {
+          "command": "/usr/bin/python3 -c import numpy as np; print('NumPy:', np.__version__)",
+          "description": "Import test: import numpy as np; print('NumPy:', np.__version__...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'numpy'\n",
+          "execution_time": 0.021795272827148438,
+          "success": false
+        },
+        {
+          "command": "/usr/bin/python3 -c import torch; print('PyTorch:', torch.__version__)",
+          "description": "Import test: import torch; print('PyTorch:', torch.__version__)...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'torch'\n",
+          "execution_time": 0.02110886573791504,
+          "success": false
+        },
+        {
+          "command": "/usr/bin/python3 -c from spintron_nn.core.mtj_models import MTJConfig, MTJDevice; print('MTJ models imported successfully')",
+          "description": "Import test: from spintron_nn.core.mtj_models import MTJConfig,...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/root/repo/spintron_nn/__init__.py\", line 8, in <module>\n    from .core.mtj_models import MTJConfig, MTJDevice\n  File \"/root/repo/spintron_nn/core/__init__.py\", line 3, in <module>\n    from .mtj_models import MTJConfig, MTJDevice, DomainWallDevice\n  File \"/root/repo/spintron_nn/core/mtj_models.py\", line 12, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n",
+          "execution_time": 0.023267745971679688,
+          "success": false
+        },
+        {
+          "command": "/usr/bin/python3 -c from spintron_nn.core.crossbar import MTJCrossbar, CrossbarConfig; print('Crossbar imported successfully')",
+          "description": "Import test: from spintron_nn.core.crossbar import MTJCrossbar,...",
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/root/repo/spintron_nn/__init__.py\", line 8, in <module>\n    from .core.mtj_models import MTJConfig, MTJDevice\n  File \"/root/repo/spintron_nn/core/__init__.py\", line 3, in <module>\n    from .mtj_models import MTJConfig, MTJDevice, DomainWallDevice\n  File \"/root/repo/spintron_nn/core/mtj_models.py\", line 12, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n",
+          "execution_time": 0.023130178451538086,
+          "success": false
+        }
       ]
     },
     {
-      "gate_name": "Performance Validation",
-      "passed": false,
-      "score": 61.46646499633789,
-      "execution_time_ms": 4.2247772216796875,
-      "recommendations_count": 2,
-      "top_recommendations": [
-        "Consider parallel processing for crossbar computations",
-        "Cache Verilog templates to reduce generation time"
-      ]
+      "test_name": "Core Functionality Tests",
+      "success": false,
+      "execution_time": 0.021851778030395508,
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\nModuleNotFoundError: No module named 'numpy'\n"
     },
     {
-      "gate_name": "Code Quality Validation",
-      "passed": false,
-      "score": 43.570356472795496,
-      "execution_time_ms": 171.9956398010254,
-      "recommendations_count": 4,
-      "top_recommendations": [
-        "Break down 4 large files into smaller modules",
-        "Refactor 27 long functions into smaller ones",
-        "Improve docstring coverage from 60.2% to 80.0%"
-      ]
+      "test_name": "Performance Benchmarks",
+      "success": false,
+      "execution_time": 0.021888256072998047,
+      "benchmark_results": {},
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\nModuleNotFoundError: No module named 'numpy'\n"
     },
     {
-      "gate_name": "Deployment Readiness",
-      "passed": true,
-      "score": 94.0,
-      "execution_time_ms": 0.3387928009033203,
-      "recommendations_count": 1,
-      "top_recommendations": [
-        "Add CI/CD pipeline configuration"
-      ]
+      "test_name": "Memory Safety Tests",
+      "success": false,
+      "execution_time": 0.021863460540771484,
+      "memory_results": {},
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\nModuleNotFoundError: No module named 'psutil'\n"
+    },
+    {
+      "test_name": "Security Validation",
+      "success": false,
+      "execution_time": 0.02193427085876465,
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\nModuleNotFoundError: No module named 'numpy'\n"
     }
   ],
-  "failure_analysis": {
-    "critical_failures": 2,
-    "minor_failures": 1,
-    "critical_gate_names": [
-      "Security Validation",
-      "Code Quality Validation"
-    ],
-    "minor_gate_names": [
-      "Performance Validation"
-    ]
-  },
-  "detailed_results": [
-    {
-      "gate_name": "Security Validation",
-      "details": {
-        "scanned_files": 78,
-        "total_issues": 12,
-        "critical_issues": 12,
-        "issues_by_category": {
-          "hardcoded_secrets": 0,
-          "sql_injection": 0,
-          "command_injection": 12,
-          "path_traversal": 0
-        },
-        "detailed_issues": {
-          "hardcoded_secrets": [],
-          "sql_injection": [],
-          "command_injection": [
-            {
-              "file": "run_minimal_validation.py",
-              "line": 191,
-              "content": "exec(compiled_code, test_globals)",
-              "pattern": "exec\\s*\\("
-            },
-            {
-              "file": "comprehensive_quality_gates.py",
-              "line": 115,
-              "content": "recommendations.append(\"Avoid using eval(), exec(), and shell=True in subprocess calls\")",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "comprehensive_quality_gates.py",
-              "line": 115,
-              "content": "recommendations.append(\"Avoid using eval(), exec(), and shell=True in subprocess calls\")",
-              "pattern": "exec\\s*\\("
-            },
-            {
-              "file": "spintron_nn/research/autonomous_optimization.py",
-              "line": 326,
-              "content": "model.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/research/benchmarking.py",
-              "line": 94,
-              "content": "model.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/research/benchmarking.py",
-              "line": 163,
-              "content": "varied_model.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/research/benchmarking.py",
-              "line": 350,
-              "content": "model.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/training/qat.py",
-              "line": 378,
-              "content": "self.qat_model.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/training/qat.py",
-              "line": 453,
-              "content": "self.qat_model.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/training/variation_aware.py",
-              "line": 317,
-              "content": "self.variation_model_obj.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/training/variation_aware.py",
-              "line": 386,
-              "content": "self.variation_model_obj.eval()",
-              "pattern": "eval\\s*\\("
-            },
-            {
-              "file": "spintron_nn/training/variation_aware.py",
-              "line": 462,
-              "content": "self.variation_model_obj.eval()",
-              "pattern": "eval\\s*\\("
-            }
-          ],
-          "path_traversal": []
-        }
-      },
-      "all_recommendations": [
-        "Avoid using eval(), exec(), and shell=True in subprocess calls"
-      ]
-    },
-    {
-      "gate_name": "Performance Validation",
-      "details": {
-        "benchmark_results": {
-          "mtj_simulation_time_ms": 0.0054836273193359375,
-          "crossbar_computation_ms": 3.6559104919433594,
-          "verilog_generation_ms": 0.04100799560546875,
-          "cache_access_time_ms": 0.4475116729736328,
-          "memory_usage_mb": 100.0
-        },
-        "performance_details": {
-          "mtj_simulation_time_ms": {
-            "actual": 0.0054836273193359375,
-            "target": 100,
-            "ratio": 2.0,
-            "score": 100
-          },
-          "crossbar_computation_ms": {
-            "actual": 3.6559104919433594,
-            "target": 50,
-            "ratio": 0.07311820983886719,
-            "score": 7.311820983886719
-          },
-          "verilog_generation_ms": {
-            "actual": 0.04100799560546875,
-            "target": 200,
-            "ratio": 0.00020503997802734375,
-            "score": 0.020503997802734375
-          },
-          "cache_access_time_ms": {
-            "actual": 0.4475116729736328,
-            "target": 1,
-            "ratio": 2.0,
-            "score": 100
-          },
-          "memory_usage_mb": {
-            "actual": 100.0,
-            "target": 500,
-            "ratio": 2.0,
-            "score": 100
-          }
-        },
-        "target_benchmarks": {
-          "mtj_simulation_time_ms": 100,
-          "crossbar_computation_ms": 50,
-          "verilog_generation_ms": 200,
-          "cache_access_time_ms": 1,
-          "memory_usage_mb": 500
-        }
-      },
-      "all_recommendations": [
-        "Consider parallel processing for crossbar computations",
-        "Cache Verilog templates to reduce generation time"
-      ]
-    },
-    {
-      "gate_name": "Code Quality Validation",
-      "details": {
-        "aggregate_metrics": {
-          "total_files": 78,
-          "total_lines": 37209,
-          "total_functions": 1291,
-          "total_classes": 308,
-          "total_docstrings": 963,
-          "long_files": [
-            {
-              "file": "spintron_nn/global/compliance.py",
-              "lines": 1073
-            },
-            {
-              "file": "spintron_nn/reliability/fault_tolerance.py",
-              "lines": 1018
-            },
-            {
-              "file": "spintron_nn/scaling/cloud_orchestration.py",
-              "lines": 1055
-            },
-            {
-              "file": "spintron_nn/utils/error_handling.py",
-              "lines": 1125
-            }
-          ],
-          "long_functions": [
-            {
-              "name": "_comprehensive_benchmarking",
-              "length": 113,
-              "start_line": 334,
-              "file": "autonomous_research_showcase.py"
-            },
-            {
-              "name": "_comparative_research_analysis",
-              "length": 117,
-              "start_line": 544,
-              "file": "autonomous_research_showcase.py"
-            },
-            {
-              "name": "_generate_academic_publication",
-              "length": 104,
-              "start_line": 661,
-              "file": "autonomous_research_showcase.py"
-            },
-            {
-              "name": "_save_validation_results",
-              "length": 121,
-              "start_line": 374,
-              "file": "final_system_validation.py"
-            },
-            {
-              "name": "_generate_publication_materials",
-              "length": 108,
-              "start_line": 486,
-              "file": "research_demonstration.py"
-            },
-            {
-              "name": "validate_code_quality",
-              "length": 114,
-              "start_line": 367,
-              "file": "comprehensive_quality_gates.py"
-            },
-            {
-              "name": "run_inference",
-              "length": 103,
-              "start_line": 152,
-              "file": "examples/basic_usage.py"
-            },
-            {
-              "name": "demonstrate_core_functionality",
-              "length": 138,
-              "start_line": 111,
-              "file": "spintron_nn/demo.py"
-            },
-            {
-              "name": "convert",
-              "length": 108,
-              "start_line": 46,
-              "file": "spintron_nn/cli/main.py"
-            },
-            {
-              "name": "benchmark",
-              "length": 107,
-              "start_line": 300,
-              "file": "spintron_nn/cli/main.py"
-            },
-            {
-              "name": "run_benchmarking",
-              "length": 161,
-              "start_line": 601,
-              "file": "spintron_nn/cli/main.py"
-            },
-            {
-              "name": "log_execution",
-              "length": 157,
-              "start_line": 783,
-              "file": "spintron_nn/cli/main.py"
-            },
-            {
-              "name": "demonstrate_global_compliance",
-              "length": 248,
-              "start_line": 825,
-              "file": "spintron_nn/global/compliance.py"
-            },
-            {
-              "name": "_load_translations",
-              "length": 234,
-              "start_line": 60,
-              "file": "spintron_nn/global/i18n.py"
-            },
-            {
-              "name": "_generate_top_module",
-              "length": 108,
-              "start_line": 99,
-              "file": "spintron_nn/hardware/verilog_gen.py"
-            },
-            {
-              "name": "_generate_crossbar_module",
-              "length": 157,
-              "start_line": 305,
-              "file": "spintron_nn/hardware/verilog_gen.py"
-            },
-            {
-              "name": "demonstrate_adaptive_scaling",
-              "length": 139,
-              "start_line": 602,
-              "file": "spintron_nn/optimization/adaptive_scaling.py"
-            },
-            {
-              "name": "__init__",
-              "length": 355,
-              "start_line": 128,
-              "file": "spintron_nn/optimization/distributed_training.py"
-            },
-            {
-              "name": "demonstrate_distributed_training",
-              "length": 179,
-              "start_line": 653,
-              "file": "spintron_nn/optimization/distributed_training.py"
-            },
-            {
-              "name": "demonstrate_advanced_materials",
-              "length": 127,
-              "start_line": 520,
-              "file": "spintron_nn/research/advanced_materials.py"
-            },
-            {
-              "name": "demonstrate_advanced_benchmarking",
-              "length": 163,
-              "start_line": 637,
-              "file": "spintron_nn/research/benchmarking.py"
-            },
-            {
-              "name": "generate_paper",
-              "length": 107,
-              "start_line": 193,
-              "file": "spintron_nn/research/publication_generators.py"
-            },
-            {
-              "name": "_generate_simulated_resources",
-              "length": 137,
-              "start_line": 235,
-              "file": "spintron_nn/scaling/cloud_orchestration.py"
-            },
-            {
-              "name": "_solve_resource_allocation_problem",
-              "length": 246,
-              "start_line": 372,
-              "file": "spintron_nn/scaling/cloud_orchestration.py"
-            },
-            {
-              "name": "_forecast_workload",
-              "length": 109,
-              "start_line": 618,
-              "file": "spintron_nn/scaling/cloud_orchestration.py"
-            },
-            {
-              "name": "_start_background_tasks",
-              "length": 114,
-              "start_line": 849,
-              "file": "spintron_nn/scaling/cloud_orchestration.py"
-            },
-            {
-              "name": "validate_mtj_config",
-              "length": 117,
-              "start_line": 78,
-              "file": "spintron_nn/utils/validation.py"
-            }
-          ],
-          "high_complexity_files": [
-            {
-              "file": "autonomous_research_showcase.py",
-              "complexity": 95
-            },
-            {
-              "file": "run_minimal_validation.py",
-              "complexity": 54
-            },
-            {
-              "file": "run_quality_gates.py",
-              "complexity": 54
-            },
-            {
-              "file": "validate_crossbar_performance.py",
-              "complexity": 139
-            },
-            {
-              "file": "comprehensive_quality_gates.py",
-              "complexity": 145
-            },
-            {
-              "file": "spintron_nn/cli/main.py",
-              "complexity": 123
-            },
-            {
-              "file": "spintron_nn/converter/graph_optimizer.py",
-              "complexity": 59
-            },
-            {
-              "file": "spintron_nn/converter/pytorch_parser.py",
-              "complexity": 59
-            },
-            {
-              "file": "spintron_nn/core/crossbar.py",
-              "complexity": 116
-            },
-            {
-              "file": "spintron_nn/global/compliance.py",
-              "complexity": 122
-            },
-            {
-              "file": "spintron_nn/hardware/verilog_gen.py",
-              "complexity": 65
-            },
-            {
-              "file": "spintron_nn/models/audio.py",
-              "complexity": 106
-            },
-            {
-              "file": "spintron_nn/models/vision.py",
-              "complexity": 69
-            },
-            {
-              "file": "spintron_nn/optimization/adaptive_scaling.py",
-              "complexity": 93
-            },
-            {
-              "file": "spintron_nn/optimization/distributed_training.py",
-              "complexity": 83
-            },
-            {
-              "file": "spintron_nn/reliability/fault_tolerance.py",
-              "complexity": 157
-            },
-            {
-              "file": "spintron_nn/research/advanced_materials.py",
-              "complexity": 61
-            },
-            {
-              "file": "spintron_nn/research/autonomous_optimization.py",
-              "complexity": 66
-            },
-            {
-              "file": "spintron_nn/research/benchmarking.py",
-              "complexity": 94
-            },
-            {
-              "file": "spintron_nn/research/probabilistic_computing.py",
-              "complexity": 65
-            },
-            {
-              "file": "spintron_nn/research/quantum_hybrid.py",
-              "complexity": 111
-            },
-            {
-              "file": "spintron_nn/research/validation.py",
-              "complexity": 115
-            },
-            {
-              "file": "spintron_nn/scaling/auto_scaler.py",
-              "complexity": 80
-            },
-            {
-              "file": "spintron_nn/scaling/cache_optimization.py",
-              "complexity": 100
-            },
-            {
-              "file": "spintron_nn/scaling/cloud_orchestration.py",
-              "complexity": 141
-            },
-            {
-              "file": "spintron_nn/scaling/distributed_inference.py",
-              "complexity": 90
-            },
-            {
-              "file": "spintron_nn/scaling/distributed_processing.py",
-              "complexity": 93
-            },
-            {
-              "file": "spintron_nn/scaling/quantum_acceleration.py",
-              "complexity": 95
-            },
-            {
-              "file": "spintron_nn/scaling/adaptive_performance_optimizer.py",
-              "complexity": 70
-            },
-            {
-              "file": "spintron_nn/scaling/intelligent_caching.py",
-              "complexity": 84
-            },
-            {
-              "file": "spintron_nn/scaling/distributed_computing.py",
-              "complexity": 110
-            },
-            {
-              "file": "spintron_nn/security/secure_computing.py",
-              "complexity": 94
-            },
-            {
-              "file": "spintron_nn/training/qat.py",
-              "complexity": 63
-            },
-            {
-              "file": "spintron_nn/training/variation_aware.py",
-              "complexity": 68
-            },
-            {
-              "file": "spintron_nn/utils/error_handling.py",
-              "complexity": 168
-            },
-            {
-              "file": "spintron_nn/utils/monitoring.py",
-              "complexity": 84
-            },
-            {
-              "file": "spintron_nn/utils/performance.py",
-              "complexity": 94
-            },
-            {
-              "file": "spintron_nn/utils/security.py",
-              "complexity": 80
-            },
-            {
-              "file": "spintron_nn/utils/validation.py",
-              "complexity": 66
-            },
-            {
-              "file": "spintron_nn/utils/comprehensive_validation.py",
-              "complexity": 59
-            }
-          ]
-        },
-        "quality_targets": {
-          "max_function_length": 100,
-          "max_file_length": 1000,
-          "min_docstring_coverage": 0.8,
-          "max_complexity": 10
-        },
-        "score_breakdown": {
-          "file_length_score": 80,
-          "function_length_score": 19,
-          "docstring_score": 75.28142589118198,
-          "complexity_score": 0
-        }
-      },
-      "all_recommendations": [
-        "Break down 4 large files into smaller modules",
-        "Refactor 27 long functions into smaller ones",
-        "Improve docstring coverage from 60.2% to 80.0%",
-        "Reduce complexity in 40 files"
-      ]
-    },
-    {
-      "gate_name": "Deployment Readiness",
-      "details": {
-        "structure_check": {
-          "required_files_present": [
-            "README.md",
-            "pyproject.toml",
-            "spintron_nn/__init__.py"
-          ],
-          "required_files_missing": [],
-          "optional_files_present": [
-            "LICENSE",
-            "Dockerfile",
-            "docker-compose.yml"
-          ],
-          "package_structure_valid": true,
-          "valid_submodules": 5,
-          "total_submodules": 5
-        },
-        "config_check": {
-          "pyproject_toml_valid": true,
-          "docker_support": true,
-          "ci_cd_support": false,
-          "package_metadata_complete": true
-        },
-        "score_breakdown": {
-          "required_files_score": 100.0,
-          "structure_score": 100,
-          "config_score": 80
-        }
-      },
-      "all_recommendations": [
-        "Add CI/CD pipeline configuration"
-      ]
-    }
-  ],
-  "deployment_ready": false,
-  "next_steps": [
-    "Address critical failures before deployment",
-    "Review and fix minor issues for optimal quality"
+  "recommendations": [
+    "Address failing tests before production deployment",
+    "Quality score below 80% - additional testing recommended"
   ]
 }
