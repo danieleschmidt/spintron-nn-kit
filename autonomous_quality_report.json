@@ -1,8 +1,8 @@
 {
-  "overall_score": 91.19850187265918,
-  "pass_count": 222,
+  "overall_score": 90.92592592592592,
+  "pass_count": 223,
   "fail_count": 2,
-  "warning_count": 43,
+  "warning_count": 45,
   "metrics": [
     {
       "name": "File exists: spintron_nn/__init__.py",
@@ -10,7 +10,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/__init__.py",
-      "timestamp": 1755563259.76904
+      "timestamp": 1755650178.3725588
     },
     {
       "name": "File exists: spintron_nn/core/__init__.py",
@@ -18,7 +18,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/core/__init__.py",
-      "timestamp": 1755563259.7690756
+      "timestamp": 1755650178.3725958
     },
     {
       "name": "File exists: spintron_nn/core/mtj_models.py",
@@ -26,7 +26,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/core/mtj_models.py",
-      "timestamp": 1755563259.7690973
+      "timestamp": 1755650178.3726196
     },
     {
       "name": "File exists: spintron_nn/core/crossbar.py",
@@ -34,7 +34,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/core/crossbar.py",
-      "timestamp": 1755563259.7691157
+      "timestamp": 1755650178.3727605
     },
     {
       "name": "File exists: spintron_nn/autonomous_optimization.py",
@@ -42,7 +42,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/autonomous_optimization.py",
-      "timestamp": 1755563259.7691345
+      "timestamp": 1755650178.372791
     },
     {
       "name": "File exists: spintron_nn/adaptive_crossbar_optimizer.py",
@@ -50,7 +50,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/adaptive_crossbar_optimizer.py",
-      "timestamp": 1755563259.769149
+      "timestamp": 1755650178.3728106
     },
     {
       "name": "File exists: spintron_nn/security_framework.py",
@@ -58,7 +58,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/security_framework.py",
-      "timestamp": 1755563259.7691634
+      "timestamp": 1755650178.3728266
     },
     {
       "name": "File exists: spintron_nn/robust_monitoring.py",
@@ -66,7 +66,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/robust_monitoring.py",
-      "timestamp": 1755563259.7691777
+      "timestamp": 1755650178.3728428
     },
     {
       "name": "File exists: spintron_nn/quantum_acceleration.py",
@@ -74,7 +74,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/quantum_acceleration.py",
-      "timestamp": 1755563259.7691922
+      "timestamp": 1755650178.3728592
     },
     {
       "name": "File exists: spintron_nn/distributed_scaling.py",
@@ -82,7 +82,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/spintron_nn/distributed_scaling.py",
-      "timestamp": 1755563259.7692115
+      "timestamp": 1755650178.3728828
     },
     {
       "name": "File exists: README.md",
@@ -90,7 +90,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/README.md",
-      "timestamp": 1755563259.769226
+      "timestamp": 1755650178.372899
     },
     {
       "name": "File exists: pyproject.toml",
@@ -98,151 +98,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Found at /root/repo/pyproject.toml",
-      "timestamp": 1755563259.76924
-    },
-    {
-      "name": "Syntax valid: autonomous_research_showcase.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.7900372
-    },
-    {
-      "name": "Syntax valid: complete_dependency_free_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.7952304
-    },
-    {
-      "name": "Syntax valid: comprehensive_quality_gates.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.805188
-    },
-    {
-      "name": "Syntax valid: final_deployment_validation.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8082075
-    },
-    {
-      "name": "Syntax valid: final_system_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8116052
-    },
-    {
-      "name": "Syntax valid: final_system_validation.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8159547
-    },
-    {
-      "name": "Syntax valid: generation3_scaling_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8219497
-    },
-    {
-      "name": "Syntax valid: isolated_robust_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8283432
-    },
-    {
-      "name": "Syntax valid: isolated_scaling_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.839426
-    },
-    {
-      "name": "Syntax valid: research_demonstration.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8461394
-    },
-    {
-      "name": "Syntax valid: research_validation_standalone.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8525913
-    },
-    {
-      "name": "Syntax valid: robust_system_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8562245
-    },
-    {
-      "name": "Syntax error: run_minimal_validation.py",
-      "category": "syntax",
-      "value": 0.0,
-      "status": "fail",
-      "details": "Syntax error: invalid syntax (<unknown>, line 177)",
-      "timestamp": 1755563259.85801
-    },
-    {
-      "name": "Syntax valid: run_quality_gates.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8618045
-    },
-    {
-      "name": "Syntax valid: standalone_validation.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.864685
-    },
-    {
-      "name": "Syntax valid: test_crossbar_optimizations.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8663883
-    },
-    {
-      "name": "Syntax valid: test_crossbar_performance.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8691876
-    },
-    {
-      "name": "Syntax valid: validate_crossbar_performance.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.8769696
+      "timestamp": 1755650178.3729153
     },
     {
       "name": "Syntax valid: autonomous_quality_gates.py",
@@ -250,7 +106,159 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.8869898
+      "timestamp": 1755650178.389442
+    },
+    {
+      "name": "Syntax valid: autonomous_research_showcase.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.402016
+    },
+    {
+      "name": "Syntax valid: complete_dependency_free_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4085898
+    },
+    {
+      "name": "Syntax valid: comprehensive_quality_gates.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.418114
+    },
+    {
+      "name": "Syntax valid: final_deployment_validation.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4213698
+    },
+    {
+      "name": "Syntax valid: final_system_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.424823
+    },
+    {
+      "name": "Syntax valid: final_system_validation.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.429527
+    },
+    {
+      "name": "Syntax valid: generation3_scaling_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.435174
+    },
+    {
+      "name": "Syntax valid: isolated_robust_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4418056
+    },
+    {
+      "name": "Syntax valid: isolated_scaling_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4523761
+    },
+    {
+      "name": "Syntax valid: production_deployment_system.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4611526
+    },
+    {
+      "name": "Syntax valid: research_demonstration.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4682722
+    },
+    {
+      "name": "Syntax valid: research_validation_standalone.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4745357
+    },
+    {
+      "name": "Syntax valid: robust_system_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4782863
+    },
+    {
+      "name": "Syntax error: run_minimal_validation.py",
+      "category": "syntax",
+      "value": 0.0,
+      "status": "fail",
+      "details": "Syntax error: invalid syntax (<unknown>, line 177)",
+      "timestamp": 1755650178.4800563
+    },
+    {
+      "name": "Syntax valid: run_quality_gates.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.484268
+    },
+    {
+      "name": "Syntax valid: standalone_validation.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4871955
+    },
+    {
+      "name": "Syntax valid: test_crossbar_optimizations.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4889476
+    },
+    {
+      "name": "Syntax valid: test_crossbar_performance.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4914343
+    },
+    {
+      "name": "Syntax valid: validate_crossbar_performance.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.4990075
     },
     {
       "name": "Syntax valid: benchmarks/basic_validation.py",
@@ -258,7 +266,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.8896873
+      "timestamp": 1755650178.502098
     },
     {
       "name": "Syntax valid: benchmarks/performance_benchmark.py",
@@ -266,7 +274,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.8927393
+      "timestamp": 1755650178.5058367
     },
     {
       "name": "Syntax valid: benchmarks/simple_benchmark.py",
@@ -274,7 +282,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.8956666
+      "timestamp": 1755650178.5085907
     },
     {
       "name": "Syntax valid: examples/basic_usage.py",
@@ -282,7 +290,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.8964999
+      "timestamp": 1755650178.5093606
     },
     {
       "name": "Syntax valid: spintron_nn/__init__.py",
@@ -290,55 +298,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.8967817
-    },
-    {
-      "name": "Syntax valid: spintron_nn/adaptive_evolution.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.911549
-    },
-    {
-      "name": "Syntax valid: spintron_nn/demo.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.914814
-    },
-    {
-      "name": "Syntax valid: spintron_nn/quick_scaling_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.916785
-    },
-    {
-      "name": "Syntax valid: spintron_nn/standalone_robust_test.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.9202044
-    },
-    {
-      "name": "Syntax valid: spintron_nn/test_generation3.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.924323
-    },
-    {
-      "name": "Syntax valid: spintron_nn/test_robust.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.9260774
+      "timestamp": 1755650178.509612
     },
     {
       "name": "Syntax valid: spintron_nn/adaptive_crossbar_optimizer.py",
@@ -346,7 +306,15 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.9392254
+      "timestamp": 1755650178.5226061
+    },
+    {
+      "name": "Syntax valid: spintron_nn/adaptive_evolution.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.5370724
     },
     {
       "name": "Syntax valid: spintron_nn/autonomous_optimization.py",
@@ -354,31 +322,15 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.949971
+      "timestamp": 1755650178.54757
     },
     {
-      "name": "Syntax valid: spintron_nn/quantum_acceleration.py",
+      "name": "Syntax valid: spintron_nn/demo.py",
       "category": "syntax",
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563259.965742
-    },
-    {
-      "name": "Syntax valid: spintron_nn/security_framework.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.9790273
-    },
-    {
-      "name": "Syntax valid: spintron_nn/robust_monitoring.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563259.9925063
+      "timestamp": 1755650178.5508292
     },
     {
       "name": "Syntax valid: spintron_nn/distributed_scaling.py",
@@ -386,7 +338,63 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0061774
+      "timestamp": 1755650178.5636382
+    },
+    {
+      "name": "Syntax valid: spintron_nn/quantum_acceleration.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.5793629
+    },
+    {
+      "name": "Syntax valid: spintron_nn/quick_scaling_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.5813534
+    },
+    {
+      "name": "Syntax valid: spintron_nn/robust_monitoring.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.5956314
+    },
+    {
+      "name": "Syntax valid: spintron_nn/security_framework.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.6110194
+    },
+    {
+      "name": "Syntax valid: spintron_nn/standalone_robust_test.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.6149466
+    },
+    {
+      "name": "Syntax valid: spintron_nn/test_generation3.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.6190977
+    },
+    {
+      "name": "Syntax valid: spintron_nn/test_robust.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650178.6209404
     },
     {
       "name": "Syntax valid: tests/__init__.py",
@@ -394,7 +402,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0064507
+      "timestamp": 1755650178.6211424
     },
     {
       "name": "Syntax valid: tests/comprehensive_integration_test.py",
@@ -402,7 +410,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0135248
+      "timestamp": 1755650178.6331346
     },
     {
       "name": "Syntax valid: tests/conftest.py",
@@ -410,7 +418,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0152493
+      "timestamp": 1755650178.6365893
     },
     {
       "name": "Syntax valid: tests/test_advanced_features.py",
@@ -418,7 +426,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0197911
+      "timestamp": 1755650178.6420949
     },
     {
       "name": "Syntax valid: tests/test_security_validation.py",
@@ -426,7 +434,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0237849
+      "timestamp": 1755650178.6468174
     },
     {
       "name": "Syntax valid: deployment/production/deployment_package.py",
@@ -434,7 +442,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.028355
+      "timestamp": 1755650178.651889
     },
     {
       "name": "Syntax valid: deployment_package/examples/basic_usage.py",
@@ -442,7 +450,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0291018
+      "timestamp": 1755650178.6526062
     },
     {
       "name": "Syntax valid: deployment_package/monitoring/health_check.py",
@@ -450,7 +458,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.029824
+      "timestamp": 1755650178.6534402
     },
     {
       "name": "Syntax valid: deployment_package/scripts/final_deployment_validation.py",
@@ -458,7 +466,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.032681
+      "timestamp": 1755650178.6564221
     },
     {
       "name": "Syntax valid: deployment_package/scripts/standalone_validation.py",
@@ -466,7 +474,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0354369
+      "timestamp": 1755650178.6594205
     },
     {
       "name": "Syntax valid: deployment_package/scripts/validate_deployment.py",
@@ -474,7 +482,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0363126
+      "timestamp": 1755650178.6602478
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/__init__.py",
@@ -482,7 +490,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.036573
+      "timestamp": 1755650178.6605246
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/demo.py",
@@ -490,7 +498,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0391672
+      "timestamp": 1755650178.6635017
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/quick_scaling_test.py",
@@ -498,7 +506,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.040885
+      "timestamp": 1755650178.6653032
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/standalone_robust_test.py",
@@ -506,7 +514,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.044257
+      "timestamp": 1755650178.669062
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/test_generation3.py",
@@ -514,7 +522,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0479212
+      "timestamp": 1755650178.6728623
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/test_robust.py",
@@ -522,7 +530,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0495434
+      "timestamp": 1755650178.6744545
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/cli/__init__.py",
@@ -530,7 +538,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0498936
+      "timestamp": 1755650178.674806
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/cli/main.py",
@@ -538,7 +546,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0637877
+      "timestamp": 1755650178.6883872
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/converter/__init__.py",
@@ -546,7 +554,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0642984
+      "timestamp": 1755650178.6889315
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/converter/graph_optimizer.py",
@@ -554,7 +562,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0681393
+      "timestamp": 1755650178.6930466
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/converter/mapping.py",
@@ -562,7 +570,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0724103
+      "timestamp": 1755650178.697766
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/converter/pytorch_parser.py",
@@ -570,7 +578,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0774574
+      "timestamp": 1755650178.703198
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/core/__init__.py",
@@ -578,7 +586,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0778196
+      "timestamp": 1755650178.7035837
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/core/crossbar.py",
@@ -586,7 +594,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0850542
+      "timestamp": 1755650178.7118738
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/core/mtj_models.py",
@@ -594,7 +602,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0874712
+      "timestamp": 1755650178.714796
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/core/sot_physics.py",
@@ -602,7 +610,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0897958
+      "timestamp": 1755650178.71725
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/global/__init__.py",
@@ -610,7 +618,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.0903099
+      "timestamp": 1755650178.7176318
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/global/compliance.py",
@@ -618,7 +626,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1020608
+      "timestamp": 1755650178.7298825
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/global/deployment.py",
@@ -626,7 +634,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1085405
+      "timestamp": 1755650178.7363846
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/global/i18n.py",
@@ -634,7 +642,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1122675
+      "timestamp": 1755650178.7402506
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/hardware/__init__.py",
@@ -642,7 +650,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.112583
+      "timestamp": 1755650178.7406151
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/hardware/constraints.py",
@@ -650,7 +658,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1151898
+      "timestamp": 1755650178.744483
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/hardware/testbench.py",
@@ -658,7 +666,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1177275
+      "timestamp": 1755650178.7470584
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/hardware/verilog_gen.py",
@@ -666,7 +674,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1218247
+      "timestamp": 1755650178.7501733
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/models/__init__.py",
@@ -674,7 +682,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1221929
+      "timestamp": 1755650178.750501
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/models/audio.py",
@@ -682,7 +690,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1300125
+      "timestamp": 1755650178.7590632
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/models/vision.py",
@@ -690,7 +698,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1361864
+      "timestamp": 1755650178.7658818
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/optimization/adaptive_scaling.py",
@@ -698,7 +706,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1456187
+      "timestamp": 1755650178.775144
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/optimization/distributed_training.py",
@@ -706,7 +714,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1559126
+      "timestamp": 1755650178.7851605
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/reliability/__init__.py",
@@ -714,7 +722,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1563778
+      "timestamp": 1755650178.7855487
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/reliability/fault_tolerance.py",
@@ -722,7 +730,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1669617
+      "timestamp": 1755650178.7968388
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/__init__.py",
@@ -730,7 +738,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1673188
+      "timestamp": 1755650178.797231
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/advanced_materials.py",
@@ -738,7 +746,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.174034
+      "timestamp": 1755650178.8051689
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/algorithms.py",
@@ -746,7 +754,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1793282
+      "timestamp": 1755650178.8122845
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/autonomous_optimization.py",
@@ -754,7 +762,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1898015
+      "timestamp": 1755650178.8226035
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/benchmarking.py",
@@ -762,7 +770,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.1999292
+      "timestamp": 1755650178.834565
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/probabilistic_computing.py",
@@ -770,7 +778,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2064886
+      "timestamp": 1755650178.8414564
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/publication.py",
@@ -778,7 +786,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2087593
+      "timestamp": 1755650178.843768
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/publication_generators.py",
@@ -786,7 +794,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2110126
+      "timestamp": 1755650178.846093
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/publication_metadata.py",
@@ -794,7 +802,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2122388
+      "timestamp": 1755650178.8475585
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/quantum_hybrid.py",
@@ -802,7 +810,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2254574
+      "timestamp": 1755650178.861037
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/research/validation.py",
@@ -810,7 +818,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2361896
+      "timestamp": 1755650178.872471
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/__init__.py",
@@ -818,7 +826,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2366407
+      "timestamp": 1755650178.8730798
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/adaptive_performance_optimizer.py",
@@ -826,7 +834,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.240913
+      "timestamp": 1755650178.877635
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/auto_scaler.py",
@@ -834,7 +842,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2463682
+      "timestamp": 1755650178.8837636
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/cache_optimization.py",
@@ -842,7 +850,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2519705
+      "timestamp": 1755650178.8896363
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/cloud_orchestration.py",
@@ -850,7 +858,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2639513
+      "timestamp": 1755650178.9025147
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/distributed_computing.py",
@@ -858,7 +866,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2723925
+      "timestamp": 1755650178.9129415
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/distributed_inference.py",
@@ -866,7 +874,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2785916
+      "timestamp": 1755650178.9198835
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/distributed_processing.py",
@@ -874,7 +882,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2843838
+      "timestamp": 1755650178.925973
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/intelligent_caching.py",
@@ -882,7 +890,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.289964
+      "timestamp": 1755650178.932011
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/performance_optimizer.py",
@@ -890,7 +898,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2910268
+      "timestamp": 1755650178.933196
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/scaling/quantum_acceleration.py",
@@ -898,7 +906,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2987316
+      "timestamp": 1755650178.9411097
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/security/__init__.py",
@@ -906,7 +914,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.2991698
+      "timestamp": 1755650178.9415195
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/security/secure_computing.py",
@@ -914,7 +922,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3066626
+      "timestamp": 1755650178.9494464
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/training/__init__.py",
@@ -922,7 +930,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3070593
+      "timestamp": 1755650178.949939
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/training/qat.py",
@@ -930,7 +938,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3121731
+      "timestamp": 1755650178.9553998
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/training/variation_aware.py",
@@ -938,7 +946,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3176591
+      "timestamp": 1755650178.9610732
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/__init__.py",
@@ -946,7 +954,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3181748
+      "timestamp": 1755650178.9615688
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/advanced_logging.py",
@@ -954,7 +962,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3219779
+      "timestamp": 1755650178.9657564
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/comprehensive_validation.py",
@@ -962,7 +970,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.32549
+      "timestamp": 1755650178.9696436
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/error_handling.py",
@@ -970,7 +978,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3415415
+      "timestamp": 1755650178.98628
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/logging_config.py",
@@ -978,7 +986,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3456712
+      "timestamp": 1755650178.9905407
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/monitoring.py",
@@ -986,7 +994,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.356386
+      "timestamp": 1755650179.0009124
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/performance.py",
@@ -994,7 +1002,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.365642
+      "timestamp": 1755650179.0109522
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/robust_error_handling.py",
@@ -1002,7 +1010,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3681333
+      "timestamp": 1755650179.0149043
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/security.py",
@@ -1010,7 +1018,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.372643
+      "timestamp": 1755650179.0218437
     },
     {
       "name": "Syntax valid: deployment_package/app/spintron_nn/utils/validation.py",
@@ -1018,7 +1026,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3772871
+      "timestamp": 1755650179.0265677
     },
     {
       "name": "Syntax valid: spintron_nn/cli/__init__.py",
@@ -1026,7 +1034,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.377645
+      "timestamp": 1755650179.0269668
     },
     {
       "name": "Syntax valid: spintron_nn/cli/main.py",
@@ -1034,7 +1042,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.392109
+      "timestamp": 1755650179.0411077
     },
     {
       "name": "Syntax valid: spintron_nn/converter/__init__.py",
@@ -1042,7 +1050,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.392475
+      "timestamp": 1755650179.0414712
     },
     {
       "name": "Syntax valid: spintron_nn/converter/graph_optimizer.py",
@@ -1050,7 +1058,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.3966842
+      "timestamp": 1755650179.0454702
     },
     {
       "name": "Syntax valid: spintron_nn/converter/mapping.py",
@@ -1058,7 +1066,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.401143
+      "timestamp": 1755650179.049645
     },
     {
       "name": "Syntax valid: spintron_nn/converter/pytorch_parser.py",
@@ -1066,7 +1074,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4060156
+      "timestamp": 1755650179.0543747
     },
     {
       "name": "Syntax valid: spintron_nn/core/__init__.py",
@@ -1074,7 +1082,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4063392
+      "timestamp": 1755650179.0547533
     },
     {
       "name": "Syntax valid: spintron_nn/core/crossbar.py",
@@ -1082,7 +1090,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4232426
+      "timestamp": 1755650179.0617807
     },
     {
       "name": "Syntax valid: spintron_nn/core/mtj_models.py",
@@ -1090,7 +1098,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4275625
+      "timestamp": 1755650179.0641022
     },
     {
       "name": "Syntax valid: spintron_nn/core/sot_physics.py",
@@ -1098,7 +1106,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4316006
+      "timestamp": 1755650179.0663826
     },
     {
       "name": "Syntax valid: spintron_nn/global/__init__.py",
@@ -1106,7 +1114,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4323146
+      "timestamp": 1755650179.0667803
     },
     {
       "name": "Syntax valid: spintron_nn/global/compliance.py",
@@ -1114,7 +1122,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4542093
+      "timestamp": 1755650179.0787747
     },
     {
       "name": "Syntax valid: spintron_nn/global/deployment.py",
@@ -1122,7 +1130,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4662404
+      "timestamp": 1755650179.0858119
     },
     {
       "name": "Syntax valid: spintron_nn/global/i18n.py",
@@ -1130,7 +1138,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.473137
+      "timestamp": 1755650179.0898116
     },
     {
       "name": "Syntax valid: spintron_nn/hardware/__init__.py",
@@ -1138,7 +1146,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4736922
+      "timestamp": 1755650179.090124
     },
     {
       "name": "Syntax valid: spintron_nn/hardware/constraints.py",
@@ -1146,7 +1154,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4785497
+      "timestamp": 1755650179.0932121
     },
     {
       "name": "Syntax valid: spintron_nn/hardware/testbench.py",
@@ -1154,7 +1162,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4830644
+      "timestamp": 1755650179.0956476
     },
     {
       "name": "Syntax valid: spintron_nn/hardware/verilog_gen.py",
@@ -1162,7 +1170,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4890432
+      "timestamp": 1755650179.098936
     },
     {
       "name": "Syntax valid: spintron_nn/models/__init__.py",
@@ -1170,7 +1178,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.4895427
+      "timestamp": 1755650179.099237
     },
     {
       "name": "Syntax valid: spintron_nn/models/audio.py",
@@ -1178,7 +1186,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.5055134
+      "timestamp": 1755650179.1219647
     },
     {
       "name": "Syntax valid: spintron_nn/models/vision.py",
@@ -1186,7 +1194,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.534937
+      "timestamp": 1755650179.1293228
     },
     {
       "name": "Syntax valid: spintron_nn/optimization/adaptive_scaling.py",
@@ -1194,7 +1202,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.5524101
+      "timestamp": 1755650179.1391277
     },
     {
       "name": "Syntax valid: spintron_nn/optimization/distributed_training.py",
@@ -1202,7 +1210,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.564893
+      "timestamp": 1755650179.149671
     },
     {
       "name": "Syntax valid: spintron_nn/reliability/__init__.py",
@@ -1210,7 +1218,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.5653481
+      "timestamp": 1755650179.1500902
     },
     {
       "name": "Syntax valid: spintron_nn/reliability/fault_tolerance.py",
@@ -1218,7 +1226,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.5771718
+      "timestamp": 1755650179.1615996
     },
     {
       "name": "Syntax valid: spintron_nn/research/__init__.py",
@@ -1226,127 +1234,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.5775905
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/advanced_materials.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.5854461
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/algorithms.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.591026
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/autonomous_optimization.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.601609
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/benchmarking.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6132393
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/comparative_study_framework.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6297088
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/neuroplasticity_algorithms.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6363032
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/probabilistic_computing.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6429622
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/publication.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6453547
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/publication_generator.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6494439
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/publication_generators.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6519244
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/publication_metadata.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.653241
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/quantum_hybrid.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.667341
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/topological_neural_architectures.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6750004
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/validation.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6871107
-    },
-    {
-      "name": "Syntax valid: spintron_nn/research/quantum_enhanced_crossbar_optimization.py",
-      "category": "syntax",
-      "value": 1.0,
-      "status": "pass",
-      "details": "Python syntax is valid",
-      "timestamp": 1755563260.6985042
+      "timestamp": 1755650179.1620705
     },
     {
       "name": "Syntax valid: spintron_nn/research/adaptive_evolutionary_neuroplasticity.py",
@@ -1354,23 +1242,111 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.7151196
+      "timestamp": 1755650179.1789594
     },
     {
-      "name": "Syntax valid: spintron_nn/research/spin_orbit_topological_networks.py",
+      "name": "Syntax valid: spintron_nn/research/advanced_materials.py",
       "category": "syntax",
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.7362354
+      "timestamp": 1755650179.1864457
     },
     {
-      "name": "Syntax valid: spintron_nn/research/unified_research_benchmarking.py",
+      "name": "Syntax valid: spintron_nn/research/algorithms.py",
       "category": "syntax",
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.7544732
+      "timestamp": 1755650179.1921456
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/autonomous_optimization.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2024405
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/benchmarking.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2144015
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/comparative_study_framework.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2321658
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/neuroplasticity_algorithms.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2391708
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/probabilistic_computing.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.246803
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/publication.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2492645
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/publication_generator.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.25336
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/publication_generators.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2556882
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/publication_metadata.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2570221
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/quantum_enhanced_crossbar_optimization.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2679632
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/quantum_hybrid.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.2919426
     },
     {
       "name": "Syntax valid: spintron_nn/research/rigorous_experimental_validation.py",
@@ -1378,7 +1354,39 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.776157
+      "timestamp": 1755650179.3160255
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/spin_orbit_topological_networks.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.3358114
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/topological_neural_architectures.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.3440354
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/unified_research_benchmarking.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.3618917
+    },
+    {
+      "name": "Syntax valid: spintron_nn/research/validation.py",
+      "category": "syntax",
+      "value": 1.0,
+      "status": "pass",
+      "details": "Python syntax is valid",
+      "timestamp": 1755650179.3731494
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/__init__.py",
@@ -1386,7 +1394,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.7765894
+      "timestamp": 1755650179.3735864
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/adaptive_performance_optimizer.py",
@@ -1394,7 +1402,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.7812972
+      "timestamp": 1755650179.3782392
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/auto_scaler.py",
@@ -1402,7 +1410,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.7874343
+      "timestamp": 1755650179.3844428
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/cache_optimization.py",
@@ -1410,7 +1418,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.7933128
+      "timestamp": 1755650179.3909624
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/cloud_orchestration.py",
@@ -1418,7 +1426,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8064628
+      "timestamp": 1755650179.4046082
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/distributed_computing.py",
@@ -1426,7 +1434,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8153214
+      "timestamp": 1755650179.4143155
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/distributed_inference.py",
@@ -1434,7 +1442,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.822376
+      "timestamp": 1755650179.4222858
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/distributed_processing.py",
@@ -1442,7 +1450,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8281364
+      "timestamp": 1755650179.4282446
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/intelligent_caching.py",
@@ -1450,7 +1458,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8343842
+      "timestamp": 1755650179.434553
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/performance_optimizer.py",
@@ -1458,7 +1466,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8355591
+      "timestamp": 1755650179.4356363
     },
     {
       "name": "Syntax valid: spintron_nn/scaling/quantum_acceleration.py",
@@ -1466,7 +1474,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8434854
+      "timestamp": 1755650179.4440913
     },
     {
       "name": "Syntax valid: spintron_nn/security/__init__.py",
@@ -1474,7 +1482,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8439403
+      "timestamp": 1755650179.4444742
     },
     {
       "name": "Syntax valid: spintron_nn/security/secure_computing.py",
@@ -1482,7 +1490,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8525987
+      "timestamp": 1755650179.4525619
     },
     {
       "name": "Syntax valid: spintron_nn/training/__init__.py",
@@ -1490,7 +1498,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.853053
+      "timestamp": 1755650179.4530795
     },
     {
       "name": "Syntax valid: spintron_nn/training/qat.py",
@@ -1498,7 +1506,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8582795
+      "timestamp": 1755650179.4586215
     },
     {
       "name": "Syntax valid: spintron_nn/training/variation_aware.py",
@@ -1506,7 +1514,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8642278
+      "timestamp": 1755650179.464621
     },
     {
       "name": "Syntax valid: spintron_nn/utils/__init__.py",
@@ -1514,7 +1522,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8647163
+      "timestamp": 1755650179.4652665
     },
     {
       "name": "Syntax valid: spintron_nn/utils/advanced_logging.py",
@@ -1522,7 +1530,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8690386
+      "timestamp": 1755650179.469426
     },
     {
       "name": "Syntax valid: spintron_nn/utils/comprehensive_validation.py",
@@ -1530,7 +1538,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.872827
+      "timestamp": 1755650179.4732606
     },
     {
       "name": "Syntax valid: spintron_nn/utils/error_handling.py",
@@ -1538,7 +1546,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.8901463
+      "timestamp": 1755650179.4900568
     },
     {
       "name": "Syntax valid: spintron_nn/utils/logging_config.py",
@@ -1546,7 +1554,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.894284
+      "timestamp": 1755650179.4944499
     },
     {
       "name": "Syntax valid: spintron_nn/utils/monitoring.py",
@@ -1554,7 +1562,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9048889
+      "timestamp": 1755650179.5050938
     },
     {
       "name": "Syntax valid: spintron_nn/utils/performance.py",
@@ -1562,7 +1570,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9143307
+      "timestamp": 1755650179.514209
     },
     {
       "name": "Syntax valid: spintron_nn/utils/robust_error_handling.py",
@@ -1570,7 +1578,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9170322
+      "timestamp": 1755650179.5168223
     },
     {
       "name": "Syntax valid: spintron_nn/utils/security.py",
@@ -1578,7 +1586,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9218106
+      "timestamp": 1755650179.521673
     },
     {
       "name": "Syntax valid: spintron_nn/utils/validation.py",
@@ -1586,7 +1594,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9261477
+      "timestamp": 1755650179.5262394
     },
     {
       "name": "Syntax valid: tests/e2e/__init__.py",
@@ -1594,7 +1602,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9263809
+      "timestamp": 1755650179.5264919
     },
     {
       "name": "Syntax valid: tests/e2e/test_complete_workflow.py",
@@ -1602,7 +1610,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.927989
+      "timestamp": 1755650179.5281696
     },
     {
       "name": "Syntax valid: tests/fixtures/__init__.py",
@@ -1610,7 +1618,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9282591
+      "timestamp": 1755650179.528366
     },
     {
       "name": "Syntax valid: tests/fixtures/sample_models.py",
@@ -1618,7 +1626,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9299035
+      "timestamp": 1755650179.5300689
     },
     {
       "name": "Syntax valid: tests/integration/__init__.py",
@@ -1626,7 +1634,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.930098
+      "timestamp": 1755650179.530245
     },
     {
       "name": "Syntax valid: tests/integration/test_hardware_generation.py",
@@ -1634,7 +1642,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9311163
+      "timestamp": 1755650179.5313056
     },
     {
       "name": "Syntax valid: tests/performance/__init__.py",
@@ -1642,7 +1650,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9312444
+      "timestamp": 1755650179.531445
     },
     {
       "name": "Syntax valid: tests/performance/test_benchmarks.py",
@@ -1650,7 +1658,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9326591
+      "timestamp": 1755650179.5328605
     },
     {
       "name": "Syntax valid: tests/unit/__init__.py",
@@ -1658,7 +1666,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.932811
+      "timestamp": 1755650179.5329978
     },
     {
       "name": "Syntax valid: tests/unit/test_converter.py",
@@ -1666,7 +1674,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9336317
+      "timestamp": 1755650179.533832
     },
     {
       "name": "Syntax valid: tests/unit/test_mtj_models.py",
@@ -1674,7 +1682,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Python syntax is valid",
-      "timestamp": 1755563260.9342253
+      "timestamp": 1755650179.5343466
     },
     {
       "name": "Function documentation coverage",
@@ -1682,7 +1690,7 @@
       "value": 82.6163818503241,
       "status": "pass",
       "details": "1402/1697 functions documented (82.6%)",
-      "timestamp": 1755563261.9388099
+      "timestamp": 1755650180.5597966
     },
     {
       "name": "Class documentation coverage",
@@ -1690,7 +1698,7 @@
       "value": 97.75,
       "status": "pass",
       "details": "391/400 classes documented (97.8%)",
-      "timestamp": 1755563261.938819
+      "timestamp": 1755650180.5598056
     },
     {
       "name": "Total lines of code",
@@ -1698,79 +1706,7 @@
       "value": 49739,
       "status": "pass",
       "details": "49739 lines of code across 84 files",
-      "timestamp": 1755563261.9388235
-    },
-    {
-      "name": "Security issue: complete_dependency_free_test.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9449224
-    },
-    {
-      "name": "Security issue: comprehensive_quality_gates.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.94544
-    },
-    {
-      "name": "Security issue: comprehensive_quality_gates.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Dangerous exec() usage detected",
-      "timestamp": 1755563261.9454827
-    },
-    {
-      "name": "Security issue: comprehensive_quality_gates.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Hardcoded password detected",
-      "timestamp": 1755563261.945563
-    },
-    {
-      "name": "Security issue: comprehensive_quality_gates.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Hardcoded secret detected",
-      "timestamp": 1755563261.9456005
-    },
-    {
-      "name": "Security issue: comprehensive_quality_gates.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Hardcoded API key detected",
-      "timestamp": 1755563261.9456375
-    },
-    {
-      "name": "Security issue: final_deployment_validation.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9458985
-    },
-    {
-      "name": "Security issue: run_minimal_validation.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Dangerous exec() usage detected",
-      "timestamp": 1755563261.9494255
-    },
-    {
-      "name": "Security issue: run_quality_gates.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Hardcoded password detected",
-      "timestamp": 1755563261.949936
+      "timestamp": 1755650180.5598092
     },
     {
       "name": "Security issue: autonomous_quality_gates.py",
@@ -1778,7 +1714,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9513643
+      "timestamp": 1755650180.565169
     },
     {
       "name": "Security issue: autonomous_quality_gates.py",
@@ -1786,7 +1722,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous exec() usage detected",
-      "timestamp": 1755563261.951415
+      "timestamp": 1755650180.5652235
     },
     {
       "name": "Security issue: autonomous_quality_gates.py",
@@ -1794,7 +1730,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Unsafe pickle deserialization detected",
-      "timestamp": 1755563261.9514868
+      "timestamp": 1755650180.5652905
     },
     {
       "name": "Security issue: autonomous_quality_gates.py",
@@ -1802,7 +1738,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded password detected",
-      "timestamp": 1755563261.9515293
+      "timestamp": 1755650180.565335
     },
     {
       "name": "Security issue: autonomous_quality_gates.py",
@@ -1810,7 +1746,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded secret detected",
-      "timestamp": 1755563261.9515753
+      "timestamp": 1755650180.565381
     },
     {
       "name": "Security issue: autonomous_quality_gates.py",
@@ -1818,7 +1754,111 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded API key detected",
-      "timestamp": 1755563261.9516168
+      "timestamp": 1755650180.5654325
+    },
+    {
+      "name": "Security issue: complete_dependency_free_test.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Dangerous eval() usage detected",
+      "timestamp": 1755650180.5671937
+    },
+    {
+      "name": "Security issue: comprehensive_quality_gates.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Dangerous eval() usage detected",
+      "timestamp": 1755650180.5677578
+    },
+    {
+      "name": "Security issue: comprehensive_quality_gates.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Dangerous exec() usage detected",
+      "timestamp": 1755650180.5678086
+    },
+    {
+      "name": "Security issue: comprehensive_quality_gates.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded password detected",
+      "timestamp": 1755650180.5678957
+    },
+    {
+      "name": "Security issue: comprehensive_quality_gates.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded secret detected",
+      "timestamp": 1755650180.5679321
+    },
+    {
+      "name": "Security issue: comprehensive_quality_gates.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded API key detected",
+      "timestamp": 1755650180.5679672
+    },
+    {
+      "name": "Security issue: final_deployment_validation.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Dangerous eval() usage detected",
+      "timestamp": 1755650180.5681994
+    },
+    {
+      "name": "Security issue: production_deployment_system.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded secret detected",
+      "timestamp": 1755650180.5711846
+    },
+    {
+      "name": "Security issue: production_deployment_system.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded API key detected",
+      "timestamp": 1755650180.5712478
+    },
+    {
+      "name": "Security issue: run_minimal_validation.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Dangerous exec() usage detected",
+      "timestamp": 1755650180.5728946
+    },
+    {
+      "name": "Security issue: run_quality_gates.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded password detected",
+      "timestamp": 1755650180.5732932
+    },
+    {
+      "name": "Security issue: spintron_nn/security_framework.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded password detected",
+      "timestamp": 1755650180.5788975
+    },
+    {
+      "name": "Security issue: spintron_nn/security_framework.py",
+      "category": "security",
+      "value": 0.0,
+      "status": "warning",
+      "details": "Hardcoded secret detected",
+      "timestamp": 1755650180.5789506
     },
     {
       "name": "Security issue: spintron_nn/standalone_robust_test.py",
@@ -1826,23 +1866,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9540412
-    },
-    {
-      "name": "Security issue: spintron_nn/security_framework.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Hardcoded password detected",
-      "timestamp": 1755563261.9564826
-    },
-    {
-      "name": "Security issue: spintron_nn/security_framework.py",
-      "category": "security",
-      "value": 0.0,
-      "status": "warning",
-      "details": "Hardcoded secret detected",
-      "timestamp": 1755563261.9565353
+      "timestamp": 1755650180.579224
     },
     {
       "name": "Security issue: tests/comprehensive_integration_test.py",
@@ -1850,7 +1874,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded password detected",
-      "timestamp": 1755563261.9574568
+      "timestamp": 1755650180.5800295
     },
     {
       "name": "Security issue: deployment/production/deployment_package.py",
@@ -1858,7 +1882,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded secret detected",
-      "timestamp": 1755563261.9587924
+      "timestamp": 1755650180.5814583
     },
     {
       "name": "Security issue: deployment_package/scripts/final_deployment_validation.py",
@@ -1866,7 +1890,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9592614
+      "timestamp": 1755650180.5819948
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/standalone_robust_test.py",
@@ -1874,7 +1898,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9602544
+      "timestamp": 1755650180.5829678
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/global/compliance.py",
@@ -1882,7 +1906,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded password detected",
-      "timestamp": 1755563261.963603
+      "timestamp": 1755650180.586359
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/research/autonomous_optimization.py",
@@ -1890,7 +1914,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9685643
+      "timestamp": 1755650180.5914385
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/research/benchmarking.py",
@@ -1898,7 +1922,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.969246
+      "timestamp": 1755650180.5921116
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/security/secure_computing.py",
@@ -1906,7 +1930,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded password detected",
-      "timestamp": 1755563261.9736497
+      "timestamp": 1755650180.5966141
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/security/secure_computing.py",
@@ -1914,7 +1938,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded secret detected",
-      "timestamp": 1755563261.9737186
+      "timestamp": 1755650180.5968053
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/training/qat.py",
@@ -1922,7 +1946,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.973992
+      "timestamp": 1755650180.5970306
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/training/variation_aware.py",
@@ -1930,7 +1954,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9743724
+      "timestamp": 1755650180.5974076
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/utils/security.py",
@@ -1938,7 +1962,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded secret detected",
-      "timestamp": 1755563261.9769533
+      "timestamp": 1755650180.5998807
     },
     {
       "name": "Security issue: deployment_package/app/spintron_nn/utils/security.py",
@@ -1946,7 +1970,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded API key detected",
-      "timestamp": 1755563261.977035
+      "timestamp": 1755650180.5999572
     },
     {
       "name": "Security issue: spintron_nn/global/compliance.py",
@@ -1954,7 +1978,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded password detected",
-      "timestamp": 1755563261.980086
+      "timestamp": 1755650180.603068
     },
     {
       "name": "Security issue: spintron_nn/research/autonomous_optimization.py",
@@ -1962,7 +1986,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9848104
+      "timestamp": 1755650180.6091878
     },
     {
       "name": "Security issue: spintron_nn/research/benchmarking.py",
@@ -1970,7 +1994,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9854307
+      "timestamp": 1755650180.6098485
     },
     {
       "name": "Security issue: spintron_nn/research/comparative_study_framework.py",
@@ -1978,7 +2002,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9862962
+      "timestamp": 1755650180.610887
     },
     {
       "name": "Security issue: spintron_nn/security/secure_computing.py",
@@ -1986,7 +2010,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded password detected",
-      "timestamp": 1755563261.9979234
+      "timestamp": 1755650180.6215353
     },
     {
       "name": "Security issue: spintron_nn/security/secure_computing.py",
@@ -1994,7 +2018,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded secret detected",
-      "timestamp": 1755563261.9979863
+      "timestamp": 1755650180.6215925
     },
     {
       "name": "Security issue: spintron_nn/training/qat.py",
@@ -2002,7 +2026,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.9981785
+      "timestamp": 1755650180.621852
     },
     {
       "name": "Security issue: spintron_nn/training/variation_aware.py",
@@ -2010,7 +2034,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563261.998571
+      "timestamp": 1755650180.622221
     },
     {
       "name": "Security issue: spintron_nn/utils/security.py",
@@ -2018,7 +2042,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded secret detected",
-      "timestamp": 1755563262.001288
+      "timestamp": 1755650180.6248162
     },
     {
       "name": "Security issue: spintron_nn/utils/security.py",
@@ -2026,7 +2050,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Hardcoded API key detected",
-      "timestamp": 1755563262.0013535
+      "timestamp": 1755650180.6248858
     },
     {
       "name": "Security issue: tests/performance/test_benchmarks.py",
@@ -2034,15 +2058,15 @@
       "value": 0.0,
       "status": "warning",
       "details": "Dangerous eval() usage detected",
-      "timestamp": 1755563262.002169
+      "timestamp": 1755650180.6256773
     },
     {
       "name": "Security scan",
       "category": "security",
       "value": 0,
       "status": "fail",
-      "details": "42 potential security issues found",
-      "timestamp": 1755563262.002327
+      "details": "44 potential security issues found",
+      "timestamp": 1755650180.625905
     },
     {
       "name": "Import performance: os",
@@ -2050,7 +2074,7 @@
       "value": 1000.0,
       "status": "pass",
       "details": "Built-in OS module imported in 0.000s",
-      "timestamp": 1755563262.0025296
+      "timestamp": 1755650180.6261756
     },
     {
       "name": "Import performance: sys",
@@ -2058,7 +2082,7 @@
       "value": 1000.0,
       "status": "pass",
       "details": "Built-in sys module imported in 0.000s",
-      "timestamp": 1755563262.00254
+      "timestamp": 1755650180.6261873
     },
     {
       "name": "Import performance: time",
@@ -2066,7 +2090,7 @@
       "value": 1000.0,
       "status": "pass",
       "details": "Built-in time module imported in 0.000s",
-      "timestamp": 1755563262.0025465
+      "timestamp": 1755650180.6261935
     },
     {
       "name": "Import performance: json",
@@ -2074,7 +2098,7 @@
       "value": 1000.0,
       "status": "pass",
       "details": "Built-in JSON module imported in 0.000s",
-      "timestamp": 1755563262.002553
+      "timestamp": 1755650180.6261995
     },
     {
       "name": "Overall import performance",
@@ -2082,7 +2106,7 @@
       "value": 100.0,
       "status": "pass",
       "details": "4/4 imports successful in 0.000s",
-      "timestamp": 1755563262.002559
+      "timestamp": 1755650180.6262069
     },
     {
       "name": "Memory allocation test",
@@ -2090,7 +2114,7 @@
       "value": 0.0,
       "status": "pass",
       "details": "Memory increased by 0.0MB during test",
-      "timestamp": 1755563262.011193
+      "timestamp": 1755650180.6342118
     },
     {
       "name": "Memory cleanup test",
@@ -2098,7 +2122,7 @@
       "value": 0.0,
       "status": "warning",
       "details": "Cleaned up 0.0MB of 0.0MB allocated",
-      "timestamp": 1755563262.0112057
+      "timestamp": 1755650180.634224
     },
     {
       "name": "List operations",
@@ -2106,7 +2130,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Test passed in 0.000s",
-      "timestamp": 1755563262.0112922
+      "timestamp": 1755650180.6343067
     },
     {
       "name": "Dictionary operations",
@@ -2114,7 +2138,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Test passed in 0.000s",
-      "timestamp": 1755563262.011315
+      "timestamp": 1755650180.6343296
     },
     {
       "name": "String operations",
@@ -2122,7 +2146,7 @@
       "value": 1.0,
       "status": "pass",
       "details": "Test passed in 0.000s",
-      "timestamp": 1755563262.0113263
+      "timestamp": 1755650180.6343417
     },
     {
       "name": "Mathematical operations",
@@ -2130,20 +2154,20 @@
       "value": 1.0,
       "status": "pass",
       "details": "Test passed in 0.000s",
-      "timestamp": 1755563262.011419
+      "timestamp": 1755650180.634394
     },
     {
       "name": "File I/O operations",
       "category": "functional",
       "value": 1.0,
       "status": "pass",
-      "details": "Test passed in 0.014s",
-      "timestamp": 1755563262.0255084
+      "details": "Test passed in 0.009s",
+      "timestamp": 1755650180.6436315
     }
   ],
   "recommendations": [
     "Fix Python syntax errors in source files",
     "Address potential security issues in code"
   ],
-  "timestamp": 1755563259.768801
+  "timestamp": 1755650178.3723898
 }
