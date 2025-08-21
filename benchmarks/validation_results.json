@@ -1,6 +1,6 @@
 {
-  "timestamp": 1755650134.118179,
-  "total_time_seconds": 0.031931161880493164,
+  "timestamp": 1755812249.072004,
+  "total_time_seconds": 0.027733325958251953,
   "test_results": {
     "imports": false,
     "functionality": false,
@@ -10,10 +10,10 @@
   },
   "all_tests_passed": false,
   "quality_metrics": {
-    "total_files": 84,
-    "total_lines": 49739,
+    "total_files": 93,
+    "total_lines": 55796,
     "documentation_ratio": 1.0,
-    "avg_lines_per_file": 592.1309523809524
+    "avg_lines_per_file": 599.9569892473119
   },
   "performance_results": {
     "performance_ok": false,

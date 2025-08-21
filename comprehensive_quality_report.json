@@ -1,0 +1,105 @@
+{
+  "timestamp": 1755812249.084431,
+  "overall_quality_score": 0.6505000000000001,
+  "gates_passed": 1,
+  "gates_total": 6,
+  "critical_issues": 1,
+  "recommendations_count": 8,
+  "deployment_ready": false,
+  "quality_results": [
+    {
+      "gate": "QualityGate.SECURITY",
+      "passed": false,
+      "score": 0.45,
+      "details": [
+        "\u274c Security framework error: attempted relative import with no known parent package",
+        "\u26a0\ufe0f Potential hardcoded password in comprehensive_quality_gates.py",
+        "\u26a0\ufe0f Potential hardcoded secret in comprehensive_quality_gates.py",
+        "\u26a0\ufe0f Potential hardcoded API key in comprehensive_quality_gates.py"
+      ],
+      "execution_time": 0.015221595764160156,
+      "recommendations": [
+        "Fix security framework implementation",
+        "Address security scan findings"
+      ],
+      "severity": "ValidationSeverity.CRITICAL"
+    },
+    {
+      "gate": "QualityGate.PERFORMANCE",
+      "passed": false,
+      "score": 0.8,
+      "details": [
+        "\u2705 Core performance benchmarks passed",
+        "\u2705 Operations throughput meets requirements",
+        "\u2705 All performance requirements met",
+        "\u26a0\ufe0f Advanced performance features error: attempted relative import with no known parent package"
+      ],
+      "execution_time": 0.4519307613372803,
+      "recommendations": [
+        "Review advanced performance implementation"
+      ],
+      "severity": "ValidationSeverity.ERROR"
+    },
+    {
+      "gate": "QualityGate.RELIABILITY",
+      "passed": false,
+      "score": 0.5599999999999999,
+      "details": [
+        "\u274c Reliability system error: attempted relative import with no known parent package",
+        "\u26a0\ufe0f Production reliability test error: attempted relative import with no known parent package"
+      ],
+      "execution_time": 1.71661376953125e-05,
+      "recommendations": [
+        "Fix reliability system implementation",
+        "Review production reliability testing"
+      ],
+      "severity": "ValidationSeverity.ERROR"
+    },
+    {
+      "gate": "QualityGate.FUNCTIONALITY",
+      "passed": false,
+      "score": 0.8,
+      "details": [
+        "\u2705 Core module imports successful",
+        "\u26a0\ufe0f Research system error: attempted relative import with no known parent package",
+        "\u2705 Code quality validation passed"
+      ],
+      "execution_time": 0.07973098754882812,
+      "recommendations": [
+        "Review research system implementation"
+      ],
+      "severity": "ValidationSeverity.ERROR"
+    },
+    {
+      "gate": "QualityGate.SCALABILITY",
+      "passed": false,
+      "score": 0.5599999999999999,
+      "details": [
+        "\u274c Scalability system error: attempted relative import with no known parent package",
+        "\u26a0\ufe0f System orchestrator error: attempted relative import with no known parent package"
+      ],
+      "execution_time": 3.24249267578125e-05,
+      "recommendations": [
+        "Fix scalability system implementation",
+        "Review system orchestrator implementation"
+      ],
+      "severity": "ValidationSeverity.WARNING"
+    },
+    {
+      "gate": "QualityGate.COMPLIANCE",
+      "passed": true,
+      "score": 1.0,
+      "details": [
+        "\u2705 Required project files present",
+        "\u2705 Documentation sections complete",
+        "\u2705 License file present",
+        "\u2705 Adequate code base size",
+        "\u2705 Good documentation coverage"
+      ],
+      "execution_time": 0.004786014556884766,
+      "recommendations": [],
+      "severity": "ValidationSeverity.INFO"
+    }
+  ],
+  "executive_summary": "EXECUTIVE SUMMARY - SpinTron-NN-Kit Quality Assessment\n\nOverall Quality Score: 65.1%\nQuality Gates: 1/6 passed\nCritical Issues: 1\nDeployment Ready: NO\n\nKey Findings:\n- SECURITY: \u274c FAIL (45.0%)\n- PERFORMANCE: \u274c FAIL (80.0%)\n- RELIABILITY: \u274c FAIL (56.0%)\n- FUNCTIONALITY: \u274c FAIL (80.0%)\n- SCALABILITY: \u274c FAIL (56.0%)\n- COMPLIANCE: \u2705 PASS (100.0%)\n\nRECOMMENDATION: Address quality issues before production deployment.\nFocus on failed quality gates and critical issues."
+}
