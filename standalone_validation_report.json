@@ -1,15 +1,15 @@
 {
-  "timestamp": 1755317159.156941,
-  "execution_time_seconds": 0.009298324584960938,
-  "tests_passed": 5,
+  "timestamp": 1755953679.5507414,
+  "execution_time_seconds": 0.014438152313232422,
+  "tests_passed": 4,
   "tests_total": 5,
-  "success_rate_percent": 100.0,
+  "success_rate_percent": 80.0,
   "test_results": {
     "core_functionality": true,
-    "file_structure": true,
+    "file_structure": false,
     "code_quality": true,
     "spintronic_algorithms": true,
     "performance_estimation": true
   },
-  "status": "PASS"
+  "status": "PARTIAL_PASS"
 }

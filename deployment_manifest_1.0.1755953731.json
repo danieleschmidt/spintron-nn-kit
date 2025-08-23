@@ -1,0 +1,225 @@
+{
+  "version": "1.0.1755953731",
+  "timestamp": "2025-08-23T12:55:31.865620+00:00",
+  "dry_run": false,
+  "package_path": "/root/repo/dist/spintron-nn-1.0.1755953731-production.tar.gz",
+  "total_regions": 6,
+  "successful_deployments": 0,
+  "failed_deployments": 0,
+  "compliance_results": {
+    "us-east-1": {
+      "violations": [
+        "Privacy notice required"
+      ],
+      "compliant": false
+    },
+    "us-west-2": {
+      "violations": [
+        "Privacy notice required"
+      ],
+      "compliant": false
+    },
+    "eu-west-1": {
+      "violations": [
+        "User consent mechanism required",
+        "Privacy notice required"
+      ],
+      "compliant": false
+    },
+    "eu-central-1": {
+      "violations": [
+        "User consent mechanism required",
+        "Privacy notice required"
+      ],
+      "compliant": false
+    },
+    "ap-southeast-1": {
+      "violations": [
+        "User consent mechanism required",
+        "Privacy notice required"
+      ],
+      "compliant": false
+    },
+    "ap-northeast-1": {
+      "violations": [
+        "User consent mechanism required",
+        "Privacy notice required"
+      ],
+      "compliant": false
+    }
+  },
+  "deployment_results": {},
+  "config": {
+    "version": "1.0.1755953731",
+    "build_timestamp": "2025-08-23T12:55:31.382711+00:00",
+    "regions": [
+      {
+        "region_id": "us-east-1",
+        "name": "US East (N. Virginia)",
+        "cloud_provider": "aws",
+        "endpoint_url": "https://api-us-east.spintron-nn.com",
+        "compliance_requirements": [
+          "CCPA"
+        ],
+        "languages": [
+          "en",
+          "es"
+        ],
+        "timezone": "America/New_York",
+        "environment": "production"
+      },
+      {
+        "region_id": "us-west-2",
+        "name": "US West (Oregon)",
+        "cloud_provider": "aws",
+        "endpoint_url": "https://api-us-west.spintron-nn.com",
+        "compliance_requirements": [
+          "CCPA"
+        ],
+        "languages": [
+          "en",
+          "es"
+        ],
+        "timezone": "America/Los_Angeles",
+        "environment": "production"
+      },
+      {
+        "region_id": "eu-west-1",
+        "name": "Europe (Ireland)",
+        "cloud_provider": "aws",
+        "endpoint_url": "https://api-eu.spintron-nn.com",
+        "compliance_requirements": [
+          "GDPR"
+        ],
+        "languages": [
+          "en",
+          "fr",
+          "de",
+          "es",
+          "it"
+        ],
+        "timezone": "Europe/Dublin",
+        "environment": "production"
+      },
+      {
+        "region_id": "eu-central-1",
+        "name": "Europe (Frankfurt)",
+        "cloud_provider": "aws",
+        "endpoint_url": "https://api-eu-central.spintron-nn.com",
+        "compliance_requirements": [
+          "GDPR"
+        ],
+        "languages": [
+          "de",
+          "en",
+          "fr"
+        ],
+        "timezone": "Europe/Berlin",
+        "environment": "production"
+      },
+      {
+        "region_id": "ap-southeast-1",
+        "name": "Asia Pacific (Singapore)",
+        "cloud_provider": "aws",
+        "endpoint_url": "https://api-apac.spintron-nn.com",
+        "compliance_requirements": [
+          "PDPA"
+        ],
+        "languages": [
+          "en",
+          "zh",
+          "ja"
+        ],
+        "timezone": "Asia/Singapore",
+        "environment": "production"
+      },
+      {
+        "region_id": "ap-northeast-1",
+        "name": "Asia Pacific (Tokyo)",
+        "cloud_provider": "aws",
+        "endpoint_url": "https://api-japan.spintron-nn.com",
+        "compliance_requirements": [
+          "PDPA"
+        ],
+        "languages": [
+          "ja",
+          "en"
+        ],
+        "timezone": "Asia/Tokyo",
+        "environment": "production"
+      }
+    ],
+    "global_config": {
+      "app_name": "SpinTron-NN-Kit",
+      "api_version": "v1",
+      "max_request_size": "100MB",
+      "timeout_seconds": 300,
+      "rate_limit_per_minute": 1000,
+      "cors_origins": [
+        "*"
+      ],
+      "supported_languages": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "ja",
+        "zh",
+        "ko",
+        "pt",
+        "ru",
+        "it"
+      ],
+      "default_language": "en",
+      "data_retention_days": 30,
+      "log_level": "info",
+      "enable_metrics": true,
+      "enable_tracing": true
+    },
+    "security_config": {
+      "encryption_at_rest": true,
+      "encryption_in_transit": true,
+      "api_key_required": true,
+      "rate_limiting_enabled": true,
+      "cors_enabled": true,
+      "content_security_policy": true,
+      "security_headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+      },
+      "allowed_origins": [
+        "https://spintron-nn.com"
+      ],
+      "session_timeout_minutes": 60
+    },
+    "monitoring_config": {
+      "prometheus_enabled": true,
+      "prometheus_port": 9090,
+      "health_check_endpoint": "/health",
+      "metrics_endpoint": "/metrics",
+      "log_aggregation": "elasticsearch",
+      "alerting_enabled": true,
+      "alert_thresholds": {
+        "cpu_usage": 80,
+        "memory_usage": 85,
+        "error_rate": 5,
+        "response_time_ms": 2000
+      },
+      "backup_enabled": true,
+      "backup_retention_days": 30
+    },
+    "scaling_config": {
+      "auto_scaling_enabled": true,
+      "min_replicas": 3,
+      "max_replicas": 20,
+      "target_cpu_utilization": 70,
+      "target_memory_utilization": 80,
+      "scale_up_cooldown_minutes": 5,
+      "scale_down_cooldown_minutes": 10,
+      "load_balancer_type": "application",
+      "session_affinity": false
+    }
+  }
+}

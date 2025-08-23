@@ -1,10 +1,10 @@
 {
-  "version": "1.0.1755563428",
+  "version": "1.0.1755953731",
   "deployment_result": {
-    "version": "1.0.1755563428",
-    "timestamp": "2025-08-19T00:30:28.503398+00:00",
+    "version": "1.0.1755953731",
+    "timestamp": "2025-08-23T12:55:31.865620+00:00",
     "dry_run": false,
-    "package_path": "/root/repo/dist/spintron-nn-1.0.1755563428-production.tar.gz",
+    "package_path": "/root/repo/dist/spintron-nn-1.0.1755953731-production.tar.gz",
     "total_regions": 6,
     "successful_deployments": 0,
     "failed_deployments": 0,
@@ -52,8 +52,8 @@
     },
     "deployment_results": {},
     "config": {
-      "version": "1.0.1755563428",
-      "build_timestamp": "2025-08-19T00:30:28.079585+00:00",
+      "version": "1.0.1755953731",
+      "build_timestamp": "2025-08-23T12:55:31.382711+00:00",
       "regions": [
         {
           "region_id": "us-east-1",
@@ -227,7 +227,7 @@
   },
   "disaster_recovery_plan": {
     "version": "1.0",
-    "created_at": "2025-08-19T00:30:28.078606+00:00",
+    "created_at": "2025-08-23T12:55:31.380698+00:00",
     "objectives": {
       "rto_minutes": 15,
       "rpo_minutes": 5,
@@ -290,5 +290,5 @@
     }
   },
   "status": "completed",
-  "timestamp": "2025-08-19T00:30:28.504534+00:00"
+  "timestamp": "2025-08-23T12:55:31.866785+00:00"
 }
