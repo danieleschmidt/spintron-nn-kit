@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spintron-nn-kit-config
+  namespace: spintron-production
+data:
+  SPINTRON_ENV: production
+  SPINTRON_LOG_LEVEL: INFO
+  SPINTRON_METRICS_PORT: 8081
+  SPINTRON_QUANTUM_NODES: 16
+  SPINTRON_CROSSBAR_SIZE: 256
+  SPINTRON_ENABLE_DISTRIBUTED: true
+  SPINTRON_CACHE_SIZE: 1000
+  SPINTRON_WORKER_THREADS: 4

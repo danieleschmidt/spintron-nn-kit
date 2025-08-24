@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spintron-nn-kit
+  namespace: spintron-production
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: true
+    nginx.ingress.kubernetes.io/rate-limit: 100
+    nginx.ingress.kubernetes.io/rate-limit-window: 1m
+spec:
+  tls:
+  - hosts:
+    - spintron-nn-kit.production.example.com
+    secretName: spintron-nn-kit-tls
+  rules:
+  - host: spintron-nn-kit.production.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: spintron-nn-kit
+            port:
+              number: 80

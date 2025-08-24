@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: spintron-production
+  labels:
+    app: spintron-nn-kit
+    environment: production
+    managed-by: spintron-autonomous-deployment

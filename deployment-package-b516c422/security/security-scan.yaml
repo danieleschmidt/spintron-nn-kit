@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: security-scan-config
+data:
+  scan-schedule: 0 2 * * *
+  vulnerability-database: |
+    https://github.com/advisories
+  severity-threshold: medium
+  fail-on-critical: true

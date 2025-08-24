@@ -1,0 +1,49 @@
+{
+  "package_id": "b516c422",
+  "creation_time": 1756043811.3985343,
+  "version": "v1.0.0",
+  "environment": "production",
+  "components": {
+    "kubernetes": [
+      "namespace.yaml",
+      "deployment.yaml",
+      "service.yaml",
+      "ingress.yaml",
+      "hpa.yaml",
+      "network-policy.yaml",
+      "rbac.yaml",
+      "configmap.yaml",
+      "secrets.yaml"
+    ],
+    "docker": [
+      "Dockerfile",
+      ".dockerignore",
+      "docker-compose.yml"
+    ],
+    "scripts": [
+      "build.sh",
+      "deploy.sh",
+      "rollback.sh",
+      "health-check.sh"
+    ],
+    "monitoring": [
+      "prometheus.yml",
+      "grafana-dashboard.json"
+    ],
+    "security": [
+      "pod-security-policy.yaml",
+      "security-scan.yaml"
+    ]
+  },
+  "deployment_strategy": "blue_green",
+  "resource_requirements": {
+    "cpu_request": "1000m",
+    "memory_request": "2Gi",
+    "replicas": 5
+  },
+  "security_features": {
+    "network_policies": true,
+    "pod_security_policies": true,
+    "rbac": true
+  }
+}
