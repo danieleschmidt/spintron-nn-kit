@@ -1,0 +1,83 @@
+version: 3.8
+services:
+  spintron-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_DATE: |
+          ${BUILD_DATE:-}
+        VCS_REF: |
+          ${VCS_REF:-}
+        VERSION: |
+          ${VERSION:-v1.0.0}
+    ports:
+    - 8080:8080
+    - 8081:8081
+    environment:
+    - SPINTRON_ENV=development
+    - SPINTRON_LOG_LEVEL=DEBUG
+    - SPINTRON_METRICS_ENABLED=true
+    volumes:
+    - ./spintron_nn:/app/spintron_nn
+    - ./examples:/app/examples
+    - app-cache:/app/cache
+    - app-logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test:
+      - CMD
+      - curl
+      - -f
+      - http://localhost:8080/health/live
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: 2.0
+          memory: 4G
+        reservations:
+          cpus: 1.0
+          memory: 2G
+  redis:
+    image: |
+      redis:7-alpine
+    ports:
+    - 6379:6379
+    volumes:
+    - redis-data:/data
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 512mb
+  prometheus:
+    image: |
+      prom/prometheus:latest
+    ports:
+    - 9090:9090
+    volumes:
+    - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    - prometheus-data:/prometheus
+    restart: unless-stopped
+    command:
+    - --config.file=/etc/prometheus/prometheus.yml
+    - --storage.tsdb.path=/prometheus
+    - --web.console.libraries=/usr/share/prometheus/console_libraries
+    - --web.console.templates=/usr/share/prometheus/consoles
+    - --web.enable-lifecycle
+volumes:
+  app-cache:
+
+  app-logs:
+
+  redis-data:
+
+  prometheus-data:
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.20.0.0/16

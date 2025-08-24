@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: spintron-nn-kit-sa
+  namespace: spintron-production---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: spintron-nn-kit-role
+  namespace: spintron-production
+rules:
+- apiGroups:
+  - 
+  resources:
+  - configmaps
+  - secrets
+  verbs:
+  - get
+  - list---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: spintron-nn-kit-rolebinding
+  namespace: spintron-production
+subjects:
+- kind: ServiceAccount
+  name: spintron-nn-kit-sa
+  namespace: spintron-production
+roleRef:
+  kind: Role
+  name: spintron-nn-kit-role
+  apiGroup: rbac.authorization.k8s.io
