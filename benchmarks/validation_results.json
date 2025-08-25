@@ -1,22 +1,22 @@
 {
-  "timestamp": 1756043006.683633,
-  "total_time_seconds": 0.03308677673339844,
+  "timestamp": 1756144791.6929834,
+  "total_time_seconds": 0.13435721397399902,
   "test_results": {
     "imports": false,
     "functionality": false,
-    "file_structure": false,
+    "file_structure": true,
     "code_quality": true,
     "performance": false
   },
   "all_tests_passed": false,
   "quality_metrics": {
-    "total_files": 94,
-    "total_lines": 56706,
+    "total_files": 100,
+    "total_lines": 59130,
     "documentation_ratio": 1.0,
-    "avg_lines_per_file": 603.2553191489362
+    "avg_lines_per_file": 591.3
   },
   "performance_results": {
     "performance_ok": false,
-    "error": "No module named 'numpy'"
+    "error": "No module named 'torch'"
   }
 }

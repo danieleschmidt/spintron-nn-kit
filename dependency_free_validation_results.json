@@ -1,0 +1,11 @@
+{
+  "performance": {
+    "resistance_ops_per_sec": 8861964.517524881,
+    "vmm_ops_per_sec": 2286.4415578615967
+  },
+  "summary": {
+    "tests_passed": 5,
+    "tests_failed": 0,
+    "overall_success": true
+  }
+}
