@@ -1,0 +1,131 @@
+{
+  "overall_score": 0.5780465125948478,
+  "gates_passed": 3,
+  "total_gates": 4,
+  "execution_time": 0.10410284996032715,
+  "status": "\u274c QUALITY GATES FAILED - NEEDS IMPROVEMENT",
+  "gates": {
+    "security": {
+      "gate_name": "Security Analysis",
+      "passed": true,
+      "score": 0.9136069114470843,
+      "metrics": [
+        {
+          "name": "Security Score",
+          "category": "security",
+          "value": 0.9136069114470843,
+          "threshold": 0.8,
+          "passed": true,
+          "weight": 1.0,
+          "details": null
+        },
+        {
+          "name": "Vulnerabilities",
+          "category": "security",
+          "value": 12,
+          "threshold": 5,
+          "passed": false,
+          "weight": 1.0,
+          "details": null
+        }
+      ],
+      "execution_time": 0.028575658798217773,
+      "timestamp": "2025-08-26 20:53:32.304358"
+    },
+    "performance": {
+      "gate_name": "Performance Benchmarks",
+      "passed": false,
+      "score": 0.0,
+      "metrics": [
+        {
+          "name": "Overall Performance",
+          "category": "performance",
+          "value": 0.0,
+          "threshold": 0.85,
+          "passed": false,
+          "weight": 1.0,
+          "details": null
+        },
+        {
+          "name": "Performance Grade",
+          "category": "performance",
+          "value": 5,
+          "threshold": 2,
+          "passed": false,
+          "weight": 1.0,
+          "details": null
+        }
+      ],
+      "execution_time": 0.004425048828125,
+      "timestamp": "2025-08-26 20:53:32.308848"
+    },
+    "code_quality": {
+      "gate_name": "Code Quality",
+      "passed": true,
+      "score": 0.8656555291369458,
+      "metrics": [
+        {
+          "name": "Code Quality Score",
+          "category": "quality",
+          "value": 0.8656555291369458,
+          "threshold": 0.75,
+          "passed": true,
+          "weight": 1.0,
+          "details": null
+        },
+        {
+          "name": "Documentation Rate",
+          "category": "quality",
+          "value": 0.7076502732240437,
+          "threshold": 0.8,
+          "passed": false,
+          "weight": 1.0,
+          "details": null
+        },
+        {
+          "name": "Average Complexity",
+          "category": "quality",
+          "value": 5.580152671755725,
+          "threshold": 10,
+          "passed": true,
+          "weight": 1.0,
+          "details": null
+        }
+      ],
+      "execution_time": 0.07041478157043457,
+      "timestamp": "2025-08-26 20:53:32.379307"
+    },
+    "production_readiness": {
+      "gate_name": "Production Readiness",
+      "passed": true,
+      "score": 0.8722222222222222,
+      "metrics": [
+        {
+          "name": "Production Score",
+          "category": "readiness",
+          "value": 0.8722222222222222,
+          "threshold": 0.8,
+          "passed": true,
+          "weight": 1.0,
+          "details": null
+        },
+        {
+          "name": "Readiness Level",
+          "category": "readiness",
+          "value": 0.5,
+          "threshold": 0.8,
+          "passed": false,
+          "weight": 1.0,
+          "details": null
+        }
+      ],
+      "execution_time": 0.00046372413635253906,
+      "timestamp": "2025-08-26 20:53:32.379819"
+    }
+  },
+  "timestamp": "2025-08-26 20:53:32.380065",
+  "recommendations": [
+    "\u26a1 Optimize performance: Focus on Generation 1-3 algorithm improvements",
+    "\u2705 Excellent work on: security, code_quality, production_readiness"
+  ]
+}
